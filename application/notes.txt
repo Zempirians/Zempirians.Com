@@ -1,0 +1,22 @@
+/application
+
+Welcome to the core that makes our application tick... This is where
+you should spend most of your time tinkering.
+
+
+->/controllers {
+	Each controller action should be stored here.
+	}
+->/layouts {
+	This is where we keep our layouts for the skin of our application.
+	}
+->/models {
+	I haven't the slightest clue... But leave it...
+	}
+->/views {
+	.->/filters: Use for filtering.
+	.->/helpers: Use for `OOP` throughout the scripts. [see below]
+	.->/scripts: Use for the dynamic STDOUT while using the application.
+	}
+
+-- James

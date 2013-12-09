@@ -1,0 +1,65 @@
+<?php
+	$wmf_xs = new Zend_Session_Namespace('SPLOIT');
+	$result = $this->labsLookup($this->stdin);
+	$test   = $this->ticketLookup($this->stdin);
+
+	if ($test > "0") {
+?>
+
+<center>
+<div class="z_ticket_table_0">
+
+	<form action="/ticket/reportsubmit" method="POST">
+	<input type="hidden" name="stdin" value="<?php echo $result["id"]; ?>">
+	
+	<div class="z_ticket_table_td0a">
+		Lab ID: <?php echo $result["id"]; ?><br>
+		Lab Name: <?php echo $result["title"]; ?><br><br>
+		Select reason for report:<br><br>
+		<input type="radio" name="reason" value="1"> The dumb thing is offline!!!<br>
+		<input type="radio" name="reason" value="2"> Nothing is working right, fix it!<br>
+		<input type="radio" name="reason" value="3"> Some one hacked it! Reset it!<br>
+		<input type="radio" name="reason" value="4"> These choices are stupid, I WILL email the issue!<br>
+
+	<br><br>
+
+	<input type="submit" name="submit" value="Submit Report" class="z_ticket_form_submit0"><br>
+
+	<br><br>
+
+	NOTE: When sending email about: issues, suggestions, etc; please provide <strong>Lab ID</strong> and be very detailed. Thank you!<br><br>
+	Send all emails to <a href="mailto:uberlame@zempirians.com">uberlame@zempirians.com</a>
+
+	</div>
+</form>
+
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>
+
+<?php
+
+	} else {
+
+?>
+
+<center>
+<div class="z_ticket_table_0">
+	<div class="z_ticket_table_td0a">
+	WARNING!<br><br>
+	This lab already has a current issue filed.<br>
+	Please check back later.<br>
+	<a href="http://www.zempirians.com/ticket/issues">View Current Tickets</a><br><br>
+	Thank you!
+	</div>
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>
+
+<?php
+	}
+?>

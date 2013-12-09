@@ -1,0 +1,32 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+	$time = microtime();
+	$time = explode(' ', $time);
+	$time = $time[1] + $time[0];
+	$start = $time;
+?>
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Zempirians, Zempire Network.</title>
+<base href="http://www.zempirians.com/" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+<meta name="Description" content="description, for seo purposes" />
+<meta name="Keywords" content="keyword 1, keyword 2" />
+
+<?= $this->partial('core.jscript.phtml'); ?>
+<?= $this->partial('core.stylesheets.phtml'); ?>
+
+</head>
+
+<body>
+
+<?= $this->partial('core.james.phtml'); ?>
+
+<div id="jhjk_layout">
+		<?= $this->layout()->content; ?>
+</div>
+
+</body>
+</html>

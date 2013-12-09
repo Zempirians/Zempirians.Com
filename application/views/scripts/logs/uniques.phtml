@@ -1,0 +1,33 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<div class="z_bugnet_table_0">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>IP Address</th>
+		<th>First Visit</th>
+		<th>Last Visit</th>
+		<th>Total</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->logsList("uniques");
+		foreach ($resultB as $result) {
+?>
+	<tr><td><?php echo $result["ip"]; ?></td><td><?php echo $result["first"]; ?></td><td><?php echo $result["last"]; ?></td><td><?php echo $result["hits"]; ?></td></tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>

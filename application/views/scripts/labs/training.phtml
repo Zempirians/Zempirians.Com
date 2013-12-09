@@ -1,0 +1,44 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<div class="z_bugnet_table_0">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th width="180">Name</th>
+		<th>Details</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->labsList("training");
+		foreach ($resultB as $result) {
+?>
+	<tr>
+		<td><a href="<?php echo $result["game"]; ?>" target="_sploit"><?php echo $result["title"]; ?></td>
+		<td>
+			<textarea class="z_list_textbox"><?php echo $result["description"]; ?></textarea>
+			<div class="z_list">
+				<div class="z_list_div"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/tick.png" class="z_list_icon">&nbsp;<?php echo $result["status"]; ?></div>
+				<div class="z_list_div"><a href="<?php echo $result["game"]; ?>" class="z_list_link"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/resultset_next.png" class="z_list_icon">Play</a></div>
+				<div class="z_list_div"><a href="<?php echo $result["download"]; ?>" class="z_list_link"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/compress.png" class="z_list_icon">&nbsp;Download</a></div>
+				<div class="z_list_div"><a href="<?php echo $result["docs"]; ?>" class="z_list_link"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/note.png" class="z_list_icon">&nbsp;Documentation</a></div>
+				<div class="z_list_div"><a href="<?php echo $result["help"]; ?>" class="z_list_link"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/reddit.png" class="z_list_icon">&nbsp;Discussion</a></div>
+				<div class="z_list_div"><a href="/ticket/report?stdin=<?php echo $result["id"]; ?>" class="z_list_link"><img src="<?php echo $wmf_xs->dirtheme; ?>/ico/wrench.png" class="z_list_icon">&nbsp;Report</a></div>
+			</div>
+		</td>
+	</tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>

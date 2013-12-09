@@ -1,0 +1,18 @@
+<div class="my_header">Error Control</span><span class="jhjk_Booking_Help" onClick="window.open('help', 'Notes', 'width=500,height=400,scrollbars=no')"> <img src="img/icons/shield.png" border="0"></div>
+
+
+
+<div align="center">
+<textarea style="width:700px;height:400px;" wrap="off">
+Message:
+<?= $this->exception->getMessage() ?> 
+
+
+Stack trace:
+<?= $this->exception->getTraceAsString() ?>
+
+
+Request Parameters:
+<? var_dump($this->request->getParams()) ?>
+</textarea>
+</div>

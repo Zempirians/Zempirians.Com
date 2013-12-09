@@ -1,0 +1,154 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<div class="z_bugnet_table_0">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan="2">RSS Feeds</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td width="180">HowToHack</td>
+		<td>
+			<div class="z_index_table_wrap">
+<?php
+
+$xml=("http://www.reddit.com/r/HowToHack/new.xml?sort=new");
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load($xml);
+
+//get elements from "<channel>"
+$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
+$channel_title = $channel->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+$channel_link = $channel->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+$channel_desc = $channel->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+//get and output "<item>" elements
+$x=$xmlDoc->getElementsByTagName('item');
+for ($i=0; $i<=1; $i++)
+  {
+	  $item_title=$x->item($i)->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_link=$x->item($i)->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_desc=$x->item($i)->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+	  echo ("<a href=\"" . $item_link . "\">" . $item_title . "</a> " . $item_desc . "");
+  }
+?>
+
+
+			</div>Reference: www.reddit.com/r/HowToHack/new.xml?sort=new
+		</td>
+	</tr>
+
+	<tr>
+		<td width="180">Slashdot</td>
+		<td>
+			<div class="z_index_table_wrap">
+
+
+<?php
+
+$xml=("http://rss.slashdot.org/Slashdot/slashdot");
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load($xml);
+
+//get elements from "<channel>"
+$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
+$channel_title = $channel->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+$channel_link = $channel->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+$channel_desc = $channel->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+//get and output "<item>" elements
+$x=$xmlDoc->getElementsByTagName('item');
+for ($i=0; $i<=5; $i++)
+  {
+	  $item_title=$x->item($i)->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_link=$x->item($i)->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_desc=$x->item($i)->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+	  echo ("<a href=\"" . $item_link . "\">" . $item_title . "</a> " . $item_desc . "");
+  }
+?>
+
+			</div>Reference: http://rss.slashdot.org/Slashdot/slashdot
+		</td>
+	</tr>
+
+	<tr>
+		<td width="180">CVE Details</td>
+		<td>
+			<div class="z_index_table_wrap">
+
+
+<?php
+
+$xml=("http://www.cvedetails.com/vulnerability-feed.php?vendor_id=0&product_id=0&version_id=0&hasexp=1&opec=1&opov=1&opcsrf=1&opfileinc=1&opgpriv=1&opsqli=1&opxss=1&opdirt=1&opmemc=1&ophttprs=1&opbyp=1&opginf=1&opdos=1&orderby=3&cvssscoremin=1");
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load($xml);
+
+//get elements from "<channel>"
+$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
+$channel_title = $channel->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+$channel_link = $channel->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+$channel_desc = $channel->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+//get and output "<item>" elements
+$x=$xmlDoc->getElementsByTagName('item');
+for ($i=0; $i<=5; $i++)
+  {
+	  $item_title=$x->item($i)->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_link=$x->item($i)->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_desc=$x->item($i)->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+	  echo ("<a href=\"" . $item_link . "\">" . $item_title . "</a> " . $item_desc . "");
+  }
+?>
+
+			</div>Reference: http://www.cvedetails.com/vulnerability-feed.php
+		</td>
+	</tr>
+
+	<tr>
+		<td width="180">Security News</td>
+		<td>
+			<div class="z_index_table_wrap">
+
+<?php
+
+$xml=("https://news.google.com/news/feeds?pz=1&cf=all&ned=us&hl=en&csid=dd6fb16c3321c108&output=rss");
+
+$xmlDoc = new DOMDocument();
+$xmlDoc->load($xml);
+
+//get elements from "<channel>"
+$channel=$xmlDoc->getElementsByTagName('channel')->item(0);
+$channel_title = $channel->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+$channel_link = $channel->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+$channel_desc = $channel->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+//get and output "<item>" elements
+$x=$xmlDoc->getElementsByTagName('item');
+for ($i=0; $i<=5; $i++)
+  {
+	  $item_title=$x->item($i)->getElementsByTagName('title')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_link=$x->item($i)->getElementsByTagName('link')->item(0)->childNodes->item(0)->nodeValue;
+	  $item_desc=$x->item($i)->getElementsByTagName('description')->item(0)->childNodes->item(0)->nodeValue;
+
+	  echo ("<a href=\"" . $item_link . "\">" . $item_title . "</a> " . $item_desc . "");
+  }
+?>
+
+			</div>Reference: https://news.google.com/news/feeds
+		</td>
+	</tr>
+</table>
+
+</center>

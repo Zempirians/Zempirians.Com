@@ -1,0 +1,32 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<div class="z_bugnet_table_0">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Name</th>
+		<th>Effected</th>
+		<th>Released</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->bugnetList("sqli");
+		foreach ($resultB as $result) {
+?>
+	<tr><td><a href="<?php echo $result["download"]; ?>" target="_sploit"><?php echo $result["title"]; ?></td><td><?php echo $result["effected"]; ?></a></td><td><?php echo $result["released"]; ?></td></tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>

@@ -1,0 +1,29 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$toolbar  = "core.toolbar." . $wmf_xs->rights . ".phtml";
+	$reserve  = $this->jhjkBackground($wmf_xs->theme);
+
+?>
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Zempirians, Zempire Network.</title>
+<base href="http://www.zempirians.com/" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> 
+<meta name="Description" content="description, for seo purposes" />
+<meta name="Keywords" content="keyword 1, keyword 2" />
+
+<?= $this->partial('core.jscript.phtml'); ?>
+<?= $this->partial('core.stylesheets.phtml'); ?>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="/sthemes/0/css/frame.css" />
+
+<frameset rows="110,*">
+  <frame src="frame.php">
+  <?= $this->layout()->content; ?>
+</frameset>
+
+
+</html>

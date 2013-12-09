@@ -1,0 +1,35 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<div class="z_bugnet_table_0">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Lab ID</th>
+		<th>Lab Name</th>
+		<th>Issue</th>
+		<th>Reported</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->ticketList("solutions");
+
+		foreach ($resultB as $result) {
+			$lab = $this->labsLookup($result["lab_id"]);
+?>
+	<tr><td><?php echo $result["lab_id"]; ?></td><td><?php echo $lab["title"]; ?></td><td><?php echo $result["solution"]; ?></td><td><?php echo $result["solved"]; ?></td></tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
+
+<div style="height:25px;width:725px;"></div>
+
+</center>
