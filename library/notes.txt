@@ -1,0 +1,5 @@
+/library
+
+Just insure that you have the lastest ZendFramework in this directory.
+
+-- James
