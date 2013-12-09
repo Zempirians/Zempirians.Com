@@ -1,0 +1,137 @@
+﻿#jhjk_toolbar  {
+	width:100%;
+	height:32px;
+	display:block;
+	position:relative;
+	border:0;
+	float:left;
+	background:#fff url(/sthemes/0/img/taskbar.png) repeat-x;
+	z-index: 999;
+}
+
+.jhjk_toolbar_css {
+	width: 800px;
+	position: relative;
+	display: inline-block;
+	border: 0;
+}
+
+.tbar_sep {
+	width:2px;
+	height:32px;
+	display:block;
+	position:relative;
+	border:0;
+	float:left;
+	background:#fff url(/sthemes/0/img/taskbar-sep.png) no-repeat;
+}
+
+.tbar_icon {
+	vertical-align: text-top;
+	float: left;
+}
+
+.tbar_icon_r {
+	vertical-align: text-top;
+	float:right;
+
+}
+
+A.tbar_menu_link:link, A.tbar_menu_link:visited {
+	color: #fff;
+	text-decoration: none;
+	font-family: Tahoma;
+	font-size:10pt;
+	text-align: left;
+}
+
+#nav, #nav ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	list-style-position:outside;
+	position:relative;
+}
+
+
+
+
+#nav a {
+	position: relative;
+	float: left;
+	display: inline-block;
+
+	width:175;
+	height:20px;
+
+	padding: 7px 5px 5px 5px;
+}
+
+
+
+#nav a:hover {
+	position: relative;
+	float: left;
+	display: inbline-block;
+
+	width:auto;
+
+	/*background-color:#0069d6;*/
+	background: #fff url('/sthemes/0/img/opac50.png') repeat;
+}
+
+
+
+#nav li {
+	display:block;
+	float:left;
+	position:relative;
+}
+
+
+#nav ul {
+	position:absolute;
+	display:none;
+	top:32px;
+}
+
+
+#nav li ul a {
+	position: relative;
+	float: left;
+	display: block;
+
+	width:175px;
+	height:20px;
+
+	padding: 7px 5px 5px 5px;
+	background: #fff url('/sthemes/0/img/opac50.png') repeat;
+}
+
+#nav li ul a:hover {
+	position: relative;
+	float: left;
+	display: block;
+
+	width:175px;
+	height:20px;
+
+	padding: 7px 5px 5px 5px;
+
+	background: #000;
+}
+
+
+#nav ul ul {
+	top:auto;
+}
+
+
+#nav li ul ul a {
+	position: relative;
+	float: left;
+	display: block;
+	width:175px;
+	height:20px;
+	left:183px;
+}

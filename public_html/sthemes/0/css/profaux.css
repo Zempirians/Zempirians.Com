@@ -1,0 +1,18 @@
+﻿----------------------------------------------------------------------
+
+SPLOIT // PROFAUX - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* HIDEOUTS SECTION */
+.s_profaux_table_0         { width:500px; height:350px; display:block; position:relative; }
+.s_profaux_table_tr0a      { display:block; position:absolute; top:330px; left:220px; font-family:Tahoma; font-size:8pt; color:#c0c0c0; width:400px; }
+.s_profaux_table_tr0b      { display:block; position:absolute; top:400px; left:520px; }
+.s_profaux_table_td0a      { display:block; position:absolute; top:20px; left:70px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_profaux_table_td0b      { display:block; position:absolute; top:15px; left:220px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_profaux_table_td0c      { display:block; position:absolute; top:60px; left:70px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_profaux_table_td0d      { display:block; position:absolute; top:55px; left:220px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_profaux_form_input0     { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:400px; }
+.s_profaux_form_textarea0  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:400px; height:250px; }
+.s_profaux_form_submit0    { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }

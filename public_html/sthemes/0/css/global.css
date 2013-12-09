@@ -1,0 +1,87 @@
+﻿.jhjk_james       { width:800px; height:201px; display:inline-block; position:relative; }
+.jhjk_james_logo  { width:275px; height:201px; display:block; position:relative; }
+.jhjk_james_links { width:400px; height:201px; display:inline-block; position:relative; }
+.jhjk_james_link  { display:block; position: relative; font-family:Verdana; font-size:10pt; color:#000; top:80px; float: left;}
+.jhjk_james_icon  { vertical-align: text-top; }
+.jhjk_james_sep   { display:block; position:relative; float:left; width:10px; }
+
+/*
+----------------------------------------------------------------------
+
+ZEMPIRE // INDEX - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* INDEX SECTION */
+.z_index_table_0      { width:800px; height:auto; display:block; position:relative; background: #555; border-style: ridge; border-width: 5px; }
+.z_index_table_wrap   { width:600px; height:100px; display:block; position:relative; overflow:auto; background: #fff; border-color: #cdcdcd; border-style: inset; border-width: 2px; }
+.z_index_table_td0a   { width:700px; display:block; font-family:Tahoma; font-size:12pt; color:#fff; text-align:left; }
+.z_index_table_td0b   { width:700px; display:block; font-family:Tahoma; font-size:10pt; color:#000; text-align:left; }
+.z_index_table_td0c   { width:700px; display:block; font-family:Tahoma; font-size:12pt; color:#fff; text-align:center; padding:15px 0px 15px 0px; }
+.z_index_table_tdgap  { width:700px; height:50px; }
+.s_account_form_input0  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:200px; }
+.s_account_form_submit0 { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }
+
+/*
+----------------------------------------------------------------------
+
+ZEMPIRE // ABOUT - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* ABOUT SECTION */
+.z_about_table_1      { width:800px; height:auto; display:block; position:relative; }
+.z_about_table_wrap   { width:725px; display:block; position:relative; overflow:auto; background: #fff; border-style: dashed; border-width: 2px; text-decoration:none; font-family:Tahoma; font-size:10pt; text-align:left; }
+.z_about_table_td0a   { width:700px; display:block; font-family:Tahoma; font-size:12pt; color:#000; text-align:left; }
+.z_about_table_td0b   { width:700px; display:block; font-family:Tahoma; font-size:10pt; color:#000; text-align:left; }
+.z_about_table_td0c   { width:700px; display:block; font-family:Tahoma; font-size:12pt; color:#000; text-align:center; padding:15px 0px 15px 0px; }
+.z_about_table_tdgap  { width:700px; height:50px; }
+
+----------------------------------------------------------------------
+
+ZEMPIRE // SHIELD - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* TRAP SECTION */
+.s_shield_table_7      { width:500px; display:block; position:relative; }
+.s_shield_table_tr7a   { display:block; position:absolute; top:185px; left:40px; font-family:Tahoma; font-size:12pt; color:#FFF; text-align:center; }
+.s_shield_table_tr7b   { display:block; position:absolute; top:20px; left:200px; }
+.s_shield_table_tr7d   { display:block; position:absolute; top:320px; left:0px; font-family:Tahoma; font-size:10pt; color:#c0c0c0; }
+
+/*
+----------------------------------------------------------------------
+
+ZEMPIRE // BUGNET - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* BUGNET SECTION */
+.z_bugnet_table_0      { width:800px; height:auto; display:block; position:relative; }
+.z_bugnet_table_wrap   { width:725px; display:block; position:relative; overflow:auto; background: #fff; border-style: dashed; border-width: 2px; }
+
+
+.z_list         { width:100%; }
+.z_list_icon    { vertical-align:text-top; float:left; border: 0;}
+.z_list_div     { float:left; display:inline-block; position:relative; padding:3px 25px 3px 0; font-family:Tahoma; font-size:10pt; text-align:left; }
+.z_list_link    { text-decoration:none; font-family:Tahoma; font-size:10pt; text-align:left; }
+.z_list_textbox { text-decoration:none; font-family:Tahoma; font-size:10pt; text-align:left; width:600px; height:100px;}
+
+.jhjk_third_hack { position:absolute; z-index:999; float:right; }
+.jhjk_third_party { display:block; position:absolute; top:0px; left:0px; width:100%; height:100%; }
+
+/*
+----------------------------------------------------------------------
+
+ZEMPIRE // TICKET - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+/* REPORT SECTION */
+.z_ticket_table_0    { width:500px; height:auto; display:block; position:relative; border:2px solid #cdcdcd; padding: 25px 10px 25px 10px;}
+.z_ticket_table_td0a { width:480px; display:block; font-family:Tahoma; font-size:12pt; color:#000; text-align:left; }
