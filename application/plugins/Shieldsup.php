@@ -7,6 +7,7 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 	function timeban($area,$meth,$type)
 	{
 		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$xray   = Zend_Registry::getInstance();
 		$config = array(
 			'host'     => $xray->host,
@@ -16,11 +17,11 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 		);
 		$db = Zend_Db::factory('Pdo_Mysql', $config);
 
-		//if ($userInfo->id <= 0) {
+		if ($userInfo->id <= 0) {
 			$c_id = 0;
-		//} else {
-		//	$c_id = $userInfo->id;
-		//}
+		} else {
+			$c_id = $userInfo->id;
+		}
 		// CHECK FOR LOG
 		$queryF = $db->select()
 			->from('log_usage')
@@ -51,6 +52,7 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 	function surflog($area,$meth,$type,$pts)
 	{
 		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$xray   = Zend_Registry::getInstance();
 		$config = array(
 			'host'     => $xray->host,
@@ -64,11 +66,11 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 		$mystr = $_SERVER['REQUEST_URI'];
 		$mysan = htmlspecialchars($mystr);
 
-		//if (!$userInfo->id) {
+		if (!$userInfo->id) {
 			$c_id = 0;
-		//} else {
-		//	$c_id = $userInfo->id;
-		//}
+		} else {
+			$c_id = $userInfo->id;
+		}
 
 	// LOG THE PROCESS
 		$set = array (
@@ -100,7 +102,7 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 	{
 		$lockdown = "UGH";
 		$envbox   = htmlspecialchars($str);
-		if (is_numeric($envbox)) {
+		if (ctype_digit($envbox)) {
 			$lockdown = "YAY";
 		}
 		return $lockdown;
@@ -131,5 +133,17 @@ class Zend_Controller_Action_Helper_Shieldsup extends Zend_Controller_Action_Hel
 		return $lockdown;
 	}
 
+	function paramalpha($str)
+	{
+		$lockdown = "UGH";
+
+		if (!ereg('[^a-zA-Z0-9]{1,}$', $str)) {
+			$lockdown = "YAY";
+		}
+
+		return $lockdown;
+	}
+
+	function paramfilter($str) { $envbox = htmlentities($str, ENT_QUOTES | ENT_IGNORE, "UTF-8"); return $envbox; }
 }
 

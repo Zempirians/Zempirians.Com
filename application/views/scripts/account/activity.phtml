@@ -1,0 +1,29 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+
+?>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>CONTROLLER</th>
+		<th>VIEW</th>
+		<th>USAGE</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>Shield</td><td>Login</td><td><?php echo $this->jhjkLog($this->zempirian->id,'shield','login:submit'); ?></td></tr>
+	<tr><td>Shield</td><td>Logout</td><td><?php echo $this->jhjkLog($this->zempirian->id,'shield','logout:submit'); ?></td></tr>
+	<tr><td>Account</td><td>Change Handle</td><td><?php echo $this->jhjkLog($this->zempirian->id,'account','handle:submit'); ?></td></tr>
+	<tr><td>Account</td><td>Change Password</td><td><?php echo $this->jhjkLog($this->zempirian->id,'account','password:submit'); ?></td></tr>
+	<tr><td>Account</td><td>Change Email</td><td><?php echo $this->jhjkLog($this->zempirian->id,'account','email:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Curl</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','curl:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Dig</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','dig:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Host</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','host:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Nmap</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','nmap:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Nslookup</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','nslookup:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Traceroute</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','traceroute:submit'); ?></td></tr>
+	<tr><td>Console</td><td>Whois</td><td><?php echo $this->jhjkLog($this->zempirian->id,'console','whois:submit'); ?></td></tr>
+</tbody>
+</table>

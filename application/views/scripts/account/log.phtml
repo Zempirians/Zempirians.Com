@@ -1,0 +1,36 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<div class="my_table_1">
+	<div class="my_header">CASE LOGS</div>
+		<div class="my_gap"></div>
+	<div class="my_header_text">Go over case logs and determine which ones you will assist with.</div>
+
+	<div class="my_gap"></div>
+	<div class="my_double"></div>
+	<div class="my_gap"></div>
+
+
+<?php
+	$x = 0;
+	foreach ($this->clog as $log) {
+		if ($x > 1) {
+?>
+	<div class="my_gap"></div>
+	<div class="my_single"></div>
+	<div class="my_gap"></div>
+<?php
+		}
+?>
+	<div class="my_cell_1"><strong><?php echo $log["subject"]; ?></strong></div>
+	<div class="my_cell_1"><?php echo $log["body"]; ?></div>
+<?php
+		++$x;
+	}
+?>
+	<div class="my_gap"></div>
+	<div class="my_double"></div>
+	<div class="my_gap"></div>
+
+</div>
