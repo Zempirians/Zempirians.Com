@@ -1,0 +1,20 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+	if ($this->zempirian->email == "") {
+		$email = "[not specified]";
+	} else {
+		$email = $this->zempirian->email;
+	}
+?>
+
+<div class="s_account_table_2">
+<form action="/account/emailsubmit" method="POST">
+	<div class="s_account_table_td2a">Current Email:</div>
+	<div class="s_account_table_td2b"><?php echo $email; ?></div>
+	<div class="s_account_table_td2c">New Email:</div>
+	<div class="s_account_table_td2d"><input type="text" name="email" class="s_account_form_input2" /></div>
+	<div class="s_account_table_tr2a">Your email will only be used as a unique login name to this system.</div>
+	<div class="s_account_table_tr2b"><input type="submit" name="submit" value="Update" class="s_account_form_submit2"></div>
+</form>
+</div>

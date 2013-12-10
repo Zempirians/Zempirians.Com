@@ -304,7 +304,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->jdtitle	= "Zempire Protected - Possible Hack Attempt";
 		$this->_helper->pagestats->hacked($_SERVER["REMOTE_ADDR"]);
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
-		$this->_helper->layout->setLayout('shield.layout');
+		$this->_helper->layout->setLayout('core.layout');
 	}
 
 	function timebanAction()
@@ -318,7 +318,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->jdheight	= "400";
 		$wmf_ns->jdtitle	= "Zempire Protected - Time Ban";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
-		$this->_helper->layout->setLayout('shield.layout');
+		$this->_helper->layout->setLayout('core.layout');
 	}
 
 	function errorsAction()
@@ -333,7 +333,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->jdtitle	= "Zempire Protected - Possible Hack Attempt";
 		$this->_helper->pagestats->errors($_SERVER["REMOTE_ADDR"]);
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
-		$this->_helper->layout->setLayout('shield.layout');
+		$this->_helper->layout->setLayout('core.layout');
 	}
 
 	function logoutAction()

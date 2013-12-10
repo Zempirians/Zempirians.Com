@@ -1,0 +1,20 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+	if ($this->zempirian->handle == "") {
+		$handle = "[not specified]";
+	} else {
+		$handle = $this->zempirian->handle;
+	}
+?>
+
+<div class="s_account_table_0">
+<form action="/account/handlesubmit" method="POST">
+	<div class="s_account_table_td0a">Current Handle:</div>
+	<div class="s_account_table_td0b"><?php echo $handle; ?></div>
+	<div class="s_account_table_td0c">New Handle:</div>
+	<div class="s_account_table_td0d"><input type="text" name="handle" class="s_account_form_input0" /></div>
+	<div class="s_account_table_tr0a">You are identified only as your Handle. Without a handle you will not be able to participate in majority of this enviroment.</div>
+	<div class="s_account_table_tr0b"><input type="submit" name="submit" value="Change" class="s_account_form_submit0"></div>
+</form>
+</div>
