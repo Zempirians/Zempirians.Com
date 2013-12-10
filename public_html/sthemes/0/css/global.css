@@ -46,6 +46,68 @@ ZEMPIRE // SHIELD - Style Sheet
 ----------------------------------------------------------------------
 */
 
+/* THANKS SECTION */
+.s_shield_table_0      { width:300px; display:block; position:relative; border:0;  font-family:tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr0a   { display:block; position:absolute; top:20px; left:50px; font-family:Tahoma; font-size:10pt; color:#c0c0c0; }
+
+/* TIMEBAN SECTION */
+.s_shield_table_1      { width:500px; display:block; position:relative; }
+.s_shield_table_tr1a   { display:block; position:absolute; top:185px; left:0px; font-family:Tahoma; font-size:12pt; color:#FFF; text-align:center; }
+.s_shield_table_tr1b   { display:block; position:absolute; top:20px; left:200px; }
+.s_shield_table_tr1c   { display:block; position:absolute; top:0px; left:0px; font-family:Tahoma; font-size:10pt; color:#b9cc17; }
+.s_shield_table_tr1d   { display:block; position:absolute; top:320px; left:0px; font-family:Tahoma; font-size:10pt; color:#c0c0c0; }
+
+/* LOGIN SECTION */
+.s_shield_table_2      { width:500px; height:350px; display:block; position:relative; border:0;  font-family:tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr2a   { display:block; position:absolute; top:320px; left:10px; font-family:Tahoma; font-size:8pt; color:#c0c0c0; }
+.s_shield_table_tr2b   { display:block; position:absolute; top:300px; left:10px; font-family:Tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr2c   { display:block; position:absolute; top:300px; left:400px; }
+.s_shield_table_td2a   { display:block; position:absolute; top:120px; left:80px; text-align:right; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td2b   { display:block; position:absolute; top:115px; left:200px;  font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td2c   { display:block; position:absolute; top:160px; left:80px;  text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td2d   { display:block; position:absolute; top:155px; left:200px;  text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_form_input2  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:200px; }
+.s_shield_form_submit2 { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }
+
+/* REGISTER SECTION */
+.s_shield_table_3      { width:500px; height:350px; display:block; position:relative; border:0;  font-family:tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr3a   { display:block; position:absolute; top:320px; left:10px; font-family:Tahoma; font-size:8pt; color:#c0c0c0; }
+.s_shield_table_tr3b   { display:block; position:absolute; top:300px; left:10px; font-family:Tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr3c   { display:block; position:absolute; top:300px; left:400px; }
+.s_shield_table_td3a   { display:block; position:absolute; top:120px; left:80px; text-align:right; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td3b   { display:block; position:absolute; top:115px; left:200px;  font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td3c   { display:block; position:absolute; top:160px; left:80px;  text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td3d   { display:block; position:absolute; top:155px; left:200px;  text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_form_input3  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:200px; }
+.s_shield_form_submit3 { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }
+
+/* VERIFY SECTION */
+.s_shield_table_4      { width:500px; height:350px; display:block; position:relative; border:0;  font-family:tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr4a   { display:block; position:absolute; top:200px; left:200px; font-family:Tahoma; font-size:8pt; color:#c0c0c0; width:200px; }
+.s_shield_table_td4a   { display:block; position:absolute; top:120px; left:80px; text-align:right; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td4b   { display:block; position:absolute; top:115px; left:200px;  font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td4c   { display:block; position:absolute; top:160px; left:80px;  text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td4d   { display:block; position:absolute; top:155px; left:200px;  font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td4e   { display:block; position:absolute; top:300px; left:400px; }
+.s_shield_form_input4  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:200px; }
+.s_shield_form_submit4 { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }
+
+/* NULLIFY SECTION */
+.s_shield_table_5      { width:500px; height:350px; display:block; position:relative; border:0;  font-family:tahoma; font-size:10pt; color:#FFF; }
+.s_shield_table_tr5a   { display:block; position:absolute; top:200px; left:200px; font-family:Tahoma; font-size:8pt; color:#c0c0c0; width:200px; }
+.s_shield_table_td5a   { display:block; position:absolute; top:120px; left:80px; text-align:right; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td5b   { display:block; position:absolute; top:115px; left:200px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td5c   { display:block; position:absolute; top:160px; left:80px; text-align:left; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td5d   { display:block; position:absolute; top:155px; left:200px; font-family:Tahoma; font-size:12pt; color:#FFF;}
+.s_shield_table_td5e   { display:block; position:absolute; top:300px; left:400px; }
+.s_shield_form_input5  { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:200px; }
+.s_shield_form_submit5 { display:block; font-family:Tahoma; font-size:10pt; color:#000; background-color:#c0c0c0; width:100px; height:35px; }
+
+/* LOGOUT SECTION */
+.s_shield_table_6      { width:300px; display:block; position:relative; }
+.s_shield_table_tr6a   { display:block; position:absolute; top:185px; left:0px; font-family:Tahoma; font-size:10pt; color:#c0c0c0; }
+.s_shield_table_tr6b   { display:block; position:absolute; top:20px; left:110px; }
+
 /* TRAP SECTION */
 .s_shield_table_7      { width:500px; display:block; position:relative; }
 .s_shield_table_tr7a   { display:block; position:absolute; top:185px; left:40px; font-family:Tahoma; font-size:12pt; color:#FFF; text-align:center; }

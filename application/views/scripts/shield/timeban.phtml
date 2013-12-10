@@ -1,11 +1,13 @@
 <?php
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
-	$response = $this->timeBan($wmf_xs->mod,$wmf_xs->page,$wmf_xs->descrip);
+	//$response = $this->timeBan($wmf_xs->mod,$wmf_xs->page,$wmf_xs->descrip);
 ?>
 
+<div id="dialog">
 <div class="s_shield_table_1">
 	<div class="s_shield_table_tr1a">You have attempted to repeat the same query to fast which has triggered a 300 second cool down.</div>
 	<div class="s_shield_table_tr1b"><img src="<?php echo $wmf_xs->dirtheme; ?>/img/shield-timeban.png" border="0"></div>
 	<div class="s_shield_table_tr1c"></div>
 	<div class="s_shield_table_tr1d">Wish to remove restrictions? <a href="/support/donate">Upgrade now.</a></div>
+</div>
 </div>
