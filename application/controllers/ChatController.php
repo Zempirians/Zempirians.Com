@@ -38,16 +38,16 @@ class ChatController extends Zend_Controller_Action
 		$this->_helper->layout->setLayout('reddit.layout');
 	}
 
-	function legionAction()
+	function staffAction()
 	{
 		$wmf_ns          	= new Zend_Session_Namespace('SPLOIT');
 		$wmf_ns->page    	= "chat";
-		$wmf_ns->mod     	= "legion";
+		$wmf_ns->mod     	= "staff";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
 		$wmf_ns->jdwidth 	= "700";
 		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Legion";
+		$wmf_ns->jdtitle	= "Chat.Staff";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
@@ -68,32 +68,17 @@ class ChatController extends Zend_Controller_Action
 		$this->_helper->layout->setLayout('reddit.layout');
 	}
 
-	function zempireAction()
+	function academyAction()
 	{
 		// SPLOIT - TIMEBAN
 		$wmf_ns          	= new Zend_Session_Namespace('SPLOIT');
 		$wmf_ns->page    	= "chat";
-		$wmf_ns->mod     	= "zempire";
+		$wmf_ns->mod     	= "academy";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
 		$wmf_ns->jdwidth 	= "700";
 		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Zempire";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
-		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
-		$this->_helper->layout->setLayout('reddit.layout');
-	}
-
-	function zempiriansAction()
-	{
-		$wmf_ns          	= new Zend_Session_Namespace('SPLOIT');
-		$wmf_ns->page    	= "chat";
-		$wmf_ns->mod     	= "zempirians";
-		$wmf_ns->descrip 	= "click";
-		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Zempirians";
+		$wmf_ns->jdtitle	= "Chat.Academy";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
