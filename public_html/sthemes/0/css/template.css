@@ -4,7 +4,7 @@
 	top: 0;
 	margin: 0;
 	/*background: #1c4373 url('/sthemes/0/img/wallpaper.png') fixed no-repeat;*/
-	background: #e5e5e5 url('/sthemes/0/img/wallpaper.png') repeat-x;
+	background: #1c1c1c;
 
 	scrollbar-arrow-color:#fff;
 	scrollbar-face-color:#000;
@@ -21,6 +21,7 @@
 	float:left;
 	width:100%;
 	height:auto;
+	background: #fff;
 }
 
 #jhjk_template
@@ -108,7 +109,7 @@
 	color: #777;
 	text-align: center;
 
-	padding: 0px 0px 25px 0px;
+	padding: 10px 0px 10px 0px;
 }
 
 A.jhjk_link {
