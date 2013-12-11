@@ -65,7 +65,18 @@
 	float:left;
 	width:100%;
 	height:100%;
-	background: #e5e5e5 url('/sthemes/0/img/footer.png') repeat;
+	background: #292727;
+}
+
+#jhjk_footstat
+{
+	overflow:auto;
+	display:block;
+	position:relative;
+	float:left;
+	width:100%;
+	height:100%;
+	background: #1c1c1c;
 }
 
 .jhjk_text

@@ -1,9 +1,29 @@
-﻿.jhjk_james       { width:800px; height:201px; display:inline-block; position:relative; }
-.jhjk_james_logo  { width:275px; height:201px; display:block; position:relative; }
-.jhjk_james_links { width:400px; height:201px; display:inline-block; position:relative; }
-.jhjk_james_link  { display:block; position: relative; font-family:Verdana; font-size:10pt; color:#000; top:80px; float: left;}
-.jhjk_james_icon  { vertical-align: text-top; }
-.jhjk_james_sep   { display:block; position:relative; float:left; width:10px; }
+﻿.jhjk_james_header { width:100%; height:301px; display:block; position:relative; background: #fff url('/sthemes/0/img/logo-bg.png') repeat-x; }
+.jhjk_james        { width:800px; height:266px; display:inline-block; position:relative; }
+.jhjk_james_logo   { width:350px; height:266px; display:block; position:relative; }
+.jhjk_james_links  { width:400px; height:201px; display:inline-block; position:relative; }
+.jhjk_james_link   { display:block; position: relative; font-family:Verdana; font-size:10pt; color:#000; float: left;}
+.jhjk_james_icon   { vertical-align: text-top; }
+.jhjk_james_sep    { display:block; position:relative; float:left; width:10px; }
+
+
+.jhjk_table_1      { width:825px; height:100%; display:inline-block; position:relative; }
+.jhjk_td_1         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+.jhjk_td_2         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+.jhjk_td_3         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+
+.f_title           { font-family:Arial; font-size:12pt; color:#FFF; text-align:left; font-weight:bold;  padding: 10px 0px 10px 0px; }
+.f_text            { font-family:Tahoma; font-size:10pt; color:#999; text-align:left;  padding-bottom: 10px; }
+
+
+.jhjk_table_2      { width:825px; height:100%; display:inline-block; position:relative; }
+.jhjk_td_4         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+.jhjk_td_5         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+.jhjk_td_6         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
+
+.x_title           { font-family:Arial; font-size:12pt; color:#333; text-align:left; font-weight:bold; padding: 10px 0px 10px 0px;}
+.x_text            { font-family:Tahoma; font-size:10pt; color:#333; text-align:left;  padding: 10px 0px 10px 0px; }
+
 
 /*
 ----------------------------------------------------------------------
