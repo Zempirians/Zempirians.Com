@@ -1,6 +1,14 @@
 <?php
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
-	$xtoolbar  = $this->siteToolbar("uberlame");
-
-	echo $xtoolbar;
+	$xtoolbar = $this->siteToolbar("uberlame");
+	$passport = $this->myPassport("uberlame");
 ?>
+
+<div id="jhjk_toolbar">
+
+<?php
+	echo $xtoolbar;
+	echo $passport;
+?>
+
+</div>

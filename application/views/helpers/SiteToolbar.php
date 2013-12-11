@@ -18,8 +18,7 @@ class Zend_View_Helper_SiteToolbar
 		$queryF = $db->select()
 			->from('site_toolbar', array("xcount"=>"COUNT(*)"))
 			->where('status = ?', "parent")
-			->where('en = ?', "1")
-			->where('rank = ?', "0";
+			->where('en = ?', "1");
 		$resultF = $db->fetchRow($queryF);
 		$queryF->reset();
 		
@@ -27,7 +26,6 @@ class Zend_View_Helper_SiteToolbar
 		if ($resultF["xcount"] > 0) {
 
 			$html  = "";
-			$html .= "<div id=\"jhjk_toolbar\">\n";
 			$html .= "	<div class=\"jhjk_toolbar_css\">\n";
 			$html .= "	<ul id=\"nav\">\n";
 			$html .= "	        <div class=\"tbar_sep\"></div>\n";
@@ -119,7 +117,6 @@ class Zend_View_Helper_SiteToolbar
 
 			$html .= "	</ul>\n";
 			$html .= "	</div>\n";
-			$html .= "</div>\n";
 
 			// OUTPUT HTML SOURCE
 			return $html;
@@ -130,3 +127,4 @@ class Zend_View_Helper_SiteToolbar
 	}
 
 }
+
