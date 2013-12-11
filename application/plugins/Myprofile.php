@@ -7,15 +7,6 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 	function numtoval($str)
 	{
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
-		$xray   = Zend_Registry::getInstance();
-		$config = array(
-			'host'     => $xray->host,
-			'username' => $xray->username,
-			'password' => $xray->password,
-			'dbname'   => $xray->dbname
-		);
-		$db = Zend_Db::factory('Pdo_Mysql', $config);
-
 		switch ($userInfo->rights) {
 			case 6:
 				$myvalue = "developer";
