@@ -123,7 +123,7 @@ class Zend_Controller_Action_Helper_Pagestats extends Zend_Controller_Action_Hel
 
 		//return ".<br> Page accessed " . $hits . " times (" . $perc_hits . "%).<br> Website attacked " . $attack . " times (" . $perc_attack . "%).<br> Website accessed " . $total . " times (" . $perc_total . "%).<br> Stats since " . $created . ".";
 		//return ".<br> Page accessed " . $hits . " times (" . $perc_hits . "%).<br> Website accessed " . $total . " times (" . $perc_total . "%).<br> Stats since " . $created . ".";
-		return ". Page accessed " . $hits . " times (" . $perc_hits . "%). Website accessed " . $total . " times (" . $unique . "). Stats since " . $created . ".";
+		return "Page accessed " . $hits . " times (" . $perc_hits . "%). Website accessed " . $total . " times (" . $unique . "). Stats since " . $created . ".";
 	}
 
 	function hacked($host)

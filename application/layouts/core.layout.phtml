@@ -3,12 +3,8 @@
 	$mytheme = 0;
 	$wmf_xs->theme = 0;
 	$wmf_xs->dirtheme = "/sthemes/0";
-
-	$time = microtime();
-	$time = explode(' ', $time);
-	$time = $time[1] + $time[0];
-	$start = $time;
 ?>
+
 <!DOCTYPE html> 
 <html>
 <head>
@@ -36,25 +32,7 @@
 
 <div style="width:100%;height:50px">&nbsp;</div>
 
-<div id="jhjk_footer">
-		<center>
-		<div class="jhjk_gap"></div>
-		<div class="jhjk_text">
-			<a href="mailto:uberlame@zempirians.com" class="jhjk_link">Need a web chat or irc channel?</a> We provide 24/7 support. Admins are always available to help assist in using the system. You will be provided a web based chat address and proper irc details to provide your community. Our network is also capable of letting communities run their own custom webirc clients that we will provide details to connect with. Feel free to contact the <a href="mailto:uberlame@zempirians.com" class="jhjk_link">Founder</a> for more details.<br><br>
-		</div>
-		<div class="jhjk_stat">
-<?php
-	$time = microtime();
-	$time = explode(' ', $time);
-	$time = $time[1] + $time[0];
-	$finish = $time;
-	$total_time = round(($finish - $start), 4);
-?>
-			Page generated in <?php echo $total_time; ?> seconds <?php echo $wmf_xs->stats; ?><br>
-		</div>
-		</center>
-</div>
-</center>
+<?= $this->partial('core.footer.phtml'); ?>
 
 </body>
 </html>

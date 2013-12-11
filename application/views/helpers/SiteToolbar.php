@@ -18,7 +18,8 @@ class Zend_View_Helper_SiteToolbar
 		$queryF = $db->select()
 			->from('site_toolbar', array("xcount"=>"COUNT(*)"))
 			->where('status = ?', "parent")
-			->where('en = ?', "1");
+			->where('en = ?', "1")
+			->where('rank = ?', "0";
 		$resultF = $db->fetchRow($queryF);
 		$queryF->reset();
 		
