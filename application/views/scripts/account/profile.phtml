@@ -3,9 +3,15 @@
 ?>
 
 <center>
-	<div class="jhjk_table_2">
-		<div class="jhjk_td_4">
-			<div class="x_title">Welcome <?php echo $this->zempirian->handle; ?>, you are currently ranked as '<?php echo $this->rightsLookup('w0rm'); ?>'.
+	<div class="jhjk_table_3">
+		<div class="jhjk_tr_1">
+			<div class="b_title">PROFILE</div>
+			<div class="b_text">Handle: <?php echo $this->zempirian->handle; ?> <input type="button" value="change"></div>
+			<div class="b_text">Password: ******** <input type="button" value="change"></div>
+			<div class="b_text">Rights: <?php echo $this->rightsLookup('w0rm'); ?></div>
+			<div class="b_text">Since: <?php echo $this->zempirian->since; ?></div>
+			<div class="b_text">Email: <?php echo $this->zempirian->email; ?></div>
+			<div class="b_text">Points: <?php echo $this->zempirian->points; ?></div>
 		</div>
 	</div>
 </center>

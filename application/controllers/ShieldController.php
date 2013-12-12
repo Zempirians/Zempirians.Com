@@ -195,7 +195,7 @@ class ShieldController extends Zend_Controller_Action
 					$authStorage->write($userInfo);
 
 					$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
- 					$this->_redirect('account/board');
+ 					$this->_redirect('account/profile');
 				}
 				else {
 					$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'0');

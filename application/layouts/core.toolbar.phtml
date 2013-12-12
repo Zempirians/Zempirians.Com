@@ -2,14 +2,22 @@
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
 	$xtoolbar = $this->siteToolbar("uberlame");
 
-	$passport = $this->myPassport("uberlame");
+	$passport = $this->accToolbar("account");
 
+	$panels   = $this->accToolbar("panels");
 ?>
 
 <div id="jhjk_toolbar">
-
+	<div class="jhjk_toolbar_css">
+	<ul id="nav">
 <?php
 	echo $xtoolbar;
+	echo $panels;
+?>
+	</ul>
+	</div>
+
+<?php
 	echo $passport;
 ?>
 
