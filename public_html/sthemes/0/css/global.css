@@ -14,6 +14,8 @@
 
 .f_title           { font-family:Arial; font-size:12pt; color:#FFF; text-align:left; padding: 10px 0px 5px 0px; }
 .f_text            { font-family:Tahoma; font-size:10pt; color:#999; text-align:left; padding-bottom: 5px; }
+A.f_link           { font-family:Tahoma; font-size:10pt; color:#999; text-decoration:none }
+A.f_link:hover     { font-family:Tahoma; font-size:10pt; color:#FFF; text-decoration:underline }
 
 
 .jhjk_table_2      { width:825px; height:100%; display:inline-block; position:relative; padding-bottom: 20px; }
@@ -23,6 +25,8 @@
 
 .x_title           { font-family:Arial; font-size:12pt; color:#333; text-align:left; padding: 10px 0px 5px 0px;}
 .x_text            { font-family:Tahoma; font-size:10pt; color:#333; text-align:left;  padding: 10px 0px 10px 0px; }
+A.x_link           { font-family:Tahoma; font-size:10pt; color:#14889e; text-decoration:none }
+A.x_link:hover     { font-family:Tahoma; font-size:10pt; color:#000; text-decoration:underline }
 
 
 /*
