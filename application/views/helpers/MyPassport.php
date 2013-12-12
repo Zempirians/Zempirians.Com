@@ -29,10 +29,12 @@ class Zend_View_Helper_MyPassport
 				$html .= "	</div>\n";
 			}
 			else {
-				$html .= "	<div align=\"right\" class=\"jhjk_toolbar_passport_css\">\n";
+				$html .= "	<div class=\"jhjk_toolbar_passport_css\">\n";
 				$html .= "	<ul id=\"nav\">\n";
 				$html .= "	        <div class=\"tbar_sep\"></div>\n";
-				$html .= "		<li class=\"tbar_menu\"><a href=\"/shield/logout\" class=\"tbar_menu_link\">&nbsp;SIGN OUT!&nbsp;</a></li>";
+				$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/vcard.png\" class=\"tbar_icon\" border=\"0\">&nbsp;My Account&nbsp;</a></li>";
+				$html .= "	        <div class=\"tbar_sep\"></div>\n";
+				$html .= "		<li class=\"tbar_menu\"><a href=\"/shield/logout\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/exclamation.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Sign out&nbsp;</a></li>";
 				$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				$html .= "	</ul>\n";
 				$html .= "	</div>\n";

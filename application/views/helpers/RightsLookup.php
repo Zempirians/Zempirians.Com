@@ -1,10 +1,8 @@
 <?php
 
-class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Helper_Abstract
+class Zend_View_Helper_RightsLookup
 {
-	function direct() {}
-
-	function numtoval($str)
+	public function rightsLookup ($str)
 	{
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		switch ($userInfo->rights) {
@@ -35,4 +33,3 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 	}
 
 }
-
