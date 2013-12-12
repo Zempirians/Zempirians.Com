@@ -26,8 +26,6 @@ class Zend_View_Helper_SiteToolbar
 		if ($resultF["xcount"] > 0) {
 
 			$html  = "";
-			$html .= "	<div class=\"jhjk_toolbar_css\">\n";
-			$html .= "	<ul id=\"nav\">\n";
 			$html .= "	        <div class=\"tbar_sep\"></div>\n";
 
 			// SUMMON ALL PARENTS
@@ -115,8 +113,6 @@ class Zend_View_Helper_SiteToolbar
 				$html .= "	        <div class=\"tbar_sep\"></div>\n";
 			}
 
-			$html .= "	</ul>\n";
-			$html .= "	</div>\n";
 
 			// OUTPUT HTML SOURCE
 			return $html;

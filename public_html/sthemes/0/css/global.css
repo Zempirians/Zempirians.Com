@@ -6,29 +6,6 @@
 .jhjk_james_icon   { vertical-align: text-top; }
 .jhjk_james_sep    { display:block; position:relative; float:left; width:10px; }
 
-
-.jhjk_table_1      { width:825px; height:100%; display:inline-block; position:relative; padding-bottom: 20px; }
-.jhjk_td_1         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-.jhjk_td_2         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-.jhjk_td_3         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-
-.f_title           { font-family:Arial; font-size:12pt; color:#FFF; text-align:left; padding: 10px 0px 5px 0px; }
-.f_text            { font-family:Tahoma; font-size:10pt; color:#999; text-align:left; padding-bottom: 5px; }
-A.f_link           { font-family:Tahoma; font-size:10pt; color:#999; text-decoration:none }
-A.f_link:hover     { font-family:Tahoma; font-size:10pt; color:#FFF; text-decoration:underline }
-
-
-.jhjk_table_2      { width:825px; height:100%; display:inline-block; position:relative; padding-bottom: 20px; }
-.jhjk_td_4         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-.jhjk_td_5         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-.jhjk_td_6         { width:250px; display:block; position:relative; float:left; padding-right: 25px; }
-
-.x_title           { font-family:Arial; font-size:12pt; color:#333; text-align:left; padding: 10px 0px 5px 0px;}
-.x_text            { font-family:Tahoma; font-size:10pt; color:#333; text-align:left;  padding: 10px 0px 10px 0px; }
-A.x_link           { font-family:Tahoma; font-size:10pt; color:#14889e; text-decoration:none }
-A.x_link:hover     { font-family:Tahoma; font-size:10pt; color:#000; text-decoration:underline }
-
-
 /*
 ----------------------------------------------------------------------
 
