@@ -1,0 +1,21 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$passport = $this->accToolbar("account");
+
+	$panels   = $this->accToolbar("admin");
+?>
+
+<div id="jhjk_toolbar">
+	<div class="jhjk_toolbar_css">
+	<ul id="nav">
+<?php
+	echo $panels;
+?>
+	</ul>
+	</div>
+
+<?php
+	echo $passport;
+?>
+
+</div>

@@ -119,7 +119,7 @@ class Zend_Controller_Action_Helper_Accounts extends Zend_Controller_Action_Help
 				'email'    => $c_email,
 				'username' => $new_email,
 				'password' => $new_passd,
-				'ip'      => $_SERVER['REMOTE_ADDR'],
+				'ip'       => $_SERVER['REMOTE_ADDR'],
 				'since'    => date("Y-m-d G:i:s")
 			);
 			$db->insert('authorize', $set);
@@ -136,7 +136,7 @@ class Zend_Controller_Action_Helper_Accounts extends Zend_Controller_Action_Help
 				'recv_id' => $resultX["id"],
 				'ip'      => $_SERVER['REMOTE_ADDR'],
 				'created' => date("Y-m-d G:i:s"),
-				'note'    => "Make sure to change your handle and password using the SETTINGS menu. Enjoy and keep it clean!",
+				'note'    => "Make sure to change your handle and password using the ACCOUNT menu. Enjoy and keep it clean!",
 				'en'      => "1",
 				'subject' => "Welcome!"
 			);
@@ -144,10 +144,10 @@ class Zend_Controller_Action_Helper_Accounts extends Zend_Controller_Action_Help
 
 			// GENERATE CONTENT
 			$bodHTML = "";
-			$bodHTML .= "Thank you for verifying your email address. Below is your account information to enter the Wargames Panel.\n\n";
+			$bodHTML .= "Thank you for verifying your email address. Below is your account information to enter the Academy.\n\n";
 			$bodHTML .= "username:: ". $new_email ."\n";
 			$bodHTML .= "password:: ". $new_passd ."\n\n";
-			$bodHTML .= "NOTE: Please change your password immediately after signing in. Do not share your username or password with anyone. If any problems occur, please contact uberlame@zempirians.com by email.";
+			$bodHTML .= "NOTE: Please change your password immediately after signing in. Do not share your username or password with anyone. If any problems occur, please contact persistence@zempirians.com by email.";
 			// SEND MAIL
 			mail($c_email , "Requested Access", $bodHTML, "From: uberlame@zempirians.com");
 
