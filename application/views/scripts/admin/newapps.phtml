@@ -1,0 +1,44 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>User ID</th>
+		<th>Age</th>
+		<th>Gender</th>
+		<th>TimeZone</th>
+		<th>Reddit</th>
+		<th>Irc</th>
+		<th>Email</th>
+		<th>Position</th>
+		<th>Details</th>
+		<th>Submitted</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->newlist;
+		foreach ($resultB as $result) {
+?>
+	<tr>
+		<td><a href="/admin/editapp?stdin=<?php echo $result["gid"]; ?>">Edit (<?php echo $result["gid"]; ?>)</a></td>
+		<td><?php echo $result["age"]; ?></td>
+		<td><?php echo $result["gender"]; ?></td>
+		<td><?php echo $result["timezone"]; ?></td>
+		<td><?php echo $result["reddit"]; ?></td>
+		<td><?php echo $result["irc"]; ?></td>
+		<td><?php echo $result["email"]; ?></td>
+		<td><?php echo $result["position"]; ?></td>
+		<td><?php echo $result["details"]; ?></td>
+		<td><?php echo $result["create"]; ?></td>
+	</tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
