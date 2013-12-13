@@ -116,7 +116,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
-		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
+		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
 
 		$email      = $this->_request->getPost('email'); 
 		$again      = $this->_request->getPost('again');
@@ -226,7 +226,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
-		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
+		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
 
 		$a = $this->_request->getPost('code');
 		$b = $this->_request->getPost('email');

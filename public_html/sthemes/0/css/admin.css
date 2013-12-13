@@ -1,0 +1,120 @@
+﻿html,body
+{
+	border: 0;
+	top: 0;
+	margin: 0;
+	/*background: #1c4373 url('/sthemes/0/img/wallpaper.png') fixed no-repeat;*/
+	background: #fff;
+
+	scrollbar-arrow-color:#fff;
+	scrollbar-face-color:#000;
+	scrollbar-track-color:#c0c0c0;
+
+	scrollbar-3dlight-color:#c0c0c0; 
+}
+
+#jhjk_layout
+{
+	overflow:auto;
+	display:block;
+	position:relative;
+	float:left;
+	width:100%;
+	height:auto;
+	background: #fff;
+}
+
+#jhjk_template
+{
+	position:relative;
+	float: left;
+	display: block;
+	width:100%;
+	height:100%;
+}
+
+#jhjk_Frame {
+	clear: both;
+	position: relative;
+	display:block;
+	float: left;
+
+	width: 800px;
+
+	padding: 2px 2px 2px 2px;
+}
+
+.jhjk_top_box {
+	position:relative;
+	float:left;
+	display: inline;
+
+	width: 175px;
+
+	padding: 2px 2px 2px 2px;
+
+	font-family: Tahoma;
+	font-size: 14px;
+	color: #000;
+}
+
+#jhjk_footer
+{
+	overflow:auto;
+	display:block;
+	position:relative;
+	float:left;
+	width:100%;
+	height:100%;
+	background: #292727;
+}
+
+#jhjk_footstat
+{
+	overflow:auto;
+	display:block;
+	position:relative;
+	float:left;
+	width:100%;
+	height:100%;
+	background: #1c1c1c;
+}
+
+.jhjk_text
+{
+	position: relative;
+	display: block;
+
+	width: 800px;
+	height: auto;
+	
+	font-family: Verdana;
+	font-size: 10pt;
+	color: #aaa;
+	text-align: justify;
+
+	padding: 25px 0px 25px 0px;
+}
+
+.jhjk_stat
+{
+	position: relative;
+	display: block;
+
+	width: 800px;
+	height: auto;
+	
+	font-family: Verdana;
+	font-size: 8pt;
+	color: #777;
+	text-align: center;
+
+	padding: 10px 0px 10px 0px;
+}
+
+A.jhjk_link {
+	text-decoration: none;
+	font-family: Verdana;
+	font-size: 10pt;
+	color: #fff;
+}
