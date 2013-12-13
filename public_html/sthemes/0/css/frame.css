@@ -3,12 +3,12 @@
 	border: 0;
 	top: 0;
 	margin: 0;
-	background: #e5e5e5 url('/sthemes/0/img/footer.png') repeat;
+	background: #e5e5e5 url('/sthemes/0/img/logo-bg.png') repeat;
 }
 
-.jhjk_frame       { width:700; height:100px; display:inline-block; position:relative; }
-.jhjk_frame_logo  { width:275px; height:100px; display:block; position:relative; float: left;}
-.jhjk_frame_links { width:400px; height:100px; display:inline-block; position:relative; }
+.jhjk_frame       { width:700; height:133px; display:inline-block; position:relative; }
+.jhjk_frame_logo  { width:275px; height:133px; display:block; position:relative; float: left;}
+.jhjk_frame_links { width:400px; height:133px; display:inline-block; position:relative; }
 .jhjk_frame_link  { display:block; position: relative; font-family:Verdana; font-size:10pt; color:#000; top:40px; float: left;}
 .jhjk_frame_icon  { vertical-align: text-top; }
 .jhjk_frame_sep   { display:block; position:relative; float:left; width:10px; }

@@ -9,7 +9,7 @@ class AccountController extends Zend_Controller_Action
 		}
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		if ($userInfo->rights < 1) {
-			$this->_redirect('shield/login');
+			$this->_redirect('shield/trap');
 		}
 	}
 

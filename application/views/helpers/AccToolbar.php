@@ -76,6 +76,18 @@ class Zend_View_Helper_AccToolbar
 			}
 		}
 
+		if ($str == "admin") {
+			if (!Zend_Auth::getInstance()->hasIdentity()) {
+				// NULL
+			}
+			else {
+				if ($userInfo->rights > 3) {
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Switch Back&nbsp;</a></li>";
+					$html .= "	        <div class=\"tbar_sep\"></div>\n";
+				}
+			}
+		}
+
 		// OUTPUT HTML SOURCE
 		return $html;
 	}
