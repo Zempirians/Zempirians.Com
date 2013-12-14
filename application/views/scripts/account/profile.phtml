@@ -1,17 +1,164 @@
 <?php
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$skills   = $this->profileSkills('0',$this->zempirian->id);
+	$creds    = $this->profileSkills('1',$this->zempirian->id);
+	$exps     = $this->profileSkills('2',$this->zempirian->id);
+	$intrs    = $this->profileSkills('3',$this->zempirian->id);
 ?>
 
 <center>
 	<div class="jhjk_table_3">
 		<div class="jhjk_tr_1">
-			<div class="b_title">PROFILE</div>
-			<div class="b_text">Handle: <?php echo $this->zempirian->handle; ?> <a href="/account/handle">Change</a></div>
-			<div class="b_text">Password: ******** <a href="/account/password">Change</a></div>
-			<div class="b_text">Rights: <?php echo $this->rightsLookup('w0rm'); ?></div>
-			<div class="b_text">Since: <?php echo $this->zempirian->since; ?></div>
-			<div class="b_text">Email: <?php echo $this->zempirian->email; ?></div>
-			<div class="b_text">Points: <?php echo $this->zempirian->points; ?></div>
+			<div class="b_title"><h2>Welcome</h2></div>
+			<div class="b_text">All default sign ups officially rank you as a student of this Academy. You will also have access to all classworks by the Staff. It is very important that you keep your profile updated at all times, as this will qualify you for advanced LIVE classes!</div>
 		</div>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="3">Account</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Handle</td>
+					<td><?php echo $this->zempirian->handle; ?></td>
+					<td><a href="/account/handle">Change</a></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>********</td>
+					<td><a href="/account/password">Change</a></td>
+				</tr>
+				<tr>
+					<td>Rights</td>
+					<td><?php echo $this->rightsLookup('w0rm'); ?></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Since</td>
+					<td><?php echo $this->zempirian->since; ?></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><?php echo $this->zempirian->email; ?></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Points</td>
+					<td><?php echo $this->zempirian->points; ?></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Skills</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($skills as $skill) {
+?>
+				<tr>
+					<td><?php echo $skill["skill"]; ?></td>
+					<td><?php echo $skill["years"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="2"><a href="/account/addskill">Add New Skill</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="3">Credentials</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($creds as $cred) {
+?>
+				<tr>
+					<td><?php echo $cred["skill"]; ?></td>
+					<td><?php echo $cred["years"]; ?></td>
+					<td><?php echo $cred["other"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="3"><a href="/account/credadd">Add New Credential</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="3">Experience</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($exps as $exp) {
+?>
+				<tr>
+					<td><?php echo $exp["skill"]; ?></td>
+					<td><?php echo $exp["years"]; ?></td>
+					<td><?php echo $exp["other"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="3"><a href="/account/addexp">Add New Experience</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="3">Interests</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($intrs as $intr) {
+?>
+				<tr>
+					<td><?php echo $intr["skill"]; ?></td>
+					<td><?php echo $intr["years"]; ?></td>
+					<td><?php echo $intr["other"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="3"><a href="/account/addintr">Add New Interest</a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </center>

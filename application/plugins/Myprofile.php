@@ -112,5 +112,133 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 		return $x;
 	}
 
+	function addskill($a,$b)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'gid'        => $userInfo->id,
+			'created'    => date("Y-m-d G:i:s"),
+			'skill'      => $a,
+			'years'      => $b,
+			'other'      => "none",
+			'ip'         => $_SERVER['REMOTE_ADDR'],
+			'place'      => "0",
+			'en'         => "1"
+		);
+		$db->insert('profile_skills', $set);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
+	function addcred($a,$b,$c)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'gid'        => $userInfo->id,
+			'created'    => date("Y-m-d G:i:s"),
+			'skill'      => $a,
+			'years'      => $b,
+			'other'      => $c,
+			'ip'         => $_SERVER['REMOTE_ADDR'],
+			'place'      => "1",
+			'en'         => "1"
+		);
+		$db->insert('profile_skills', $set);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
+	function addexp($a,$b,$c)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'gid'        => $userInfo->id,
+			'created'    => date("Y-m-d G:i:s"),
+			'skill'      => $a,
+			'years'      => $b,
+			'other'      => $c,
+			'ip'         => $_SERVER['REMOTE_ADDR'],
+			'place'      => "2",
+			'en'         => "1"
+		);
+		$db->insert('profile_skills', $set);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
+	function addintr($a,$b,$c)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'gid'        => $userInfo->id,
+			'created'    => date("Y-m-d G:i:s"),
+			'skill'      => $a,
+			'years'      => $b,
+			'other'      => $c,
+			'ip'         => $_SERVER['REMOTE_ADDR'],
+			'place'      => "3",
+			'en'         => "1"
+		);
+		$db->insert('profile_skills', $set);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
 }
 
