@@ -82,9 +82,8 @@ class AccountController extends Zend_Controller_Action
 			$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 			$this->_helper->accounts->changehandle($x_handle);
 			$userInfo->handle = $x_handle;
+			$this->_redirect('account/profile');
 		}
-
-		$this->view->w0rm = $w0rm;
 	}
 
 	function passwordAction()
@@ -140,8 +139,8 @@ class AccountController extends Zend_Controller_Action
 			$this->_helper->accounts->changepassword($x_pass);
 			$userInfo->password = $x_pass;
 			$w0rm = "YAY";
+			$this->_redirect('account/profile');
 		}
-		$this->view->w0rm = $w0rm;
 	}
 
 	function addskillAction()

@@ -8,13 +8,32 @@
 	}
 ?>
 
-<div class="s_account_table_0">
+<center>
 <form action="/account/submithandle" method="POST">
-	<div class="s_account_table_td0a">Current Handle:</div>
-	<div class="s_account_table_td0b"><?php echo $handle; ?></div>
-	<div class="s_account_table_td0c">New Handle:</div>
-	<div class="s_account_table_td0d"><input type="text" name="handle" class="s_account_form_input0" /></div>
-	<div class="s_account_table_tr0a">You are identified only as your Handle. Without a handle you will not be able to participate in majority of this enviroment.</div>
-	<div class="s_account_table_tr0b"><input type="submit" name="submit" value="Change" class="s_account_form_submit0"></div>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Change Handle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Current Handle</td>
+					<td><?php echo $handle; ?></td>
+				</tr>
+				<tr>
+					<td>New Handle</td>
+					<td><input type="text" name="handle" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td colspan="2">You are identified only as your Handle. Without a handle you will not be able to participate in majority of this enviroment.</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Change" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </form>
-</div>
+</center>

@@ -37,7 +37,13 @@
 .ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
 .ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
 .ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}.ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
+
+
+/* Adjust
 .ui-accordion .ui-accordion-header { display: block; cursor: pointer; position: relative; margin-top: 2px; padding: .5em .5em .5em .7em; zoom: 1; }
+*/
+.ui-accordion .ui-accordion-header { display: block; cursor: pointer; position: relative; margin-top: 2px; padding: .5em .5em .5em .7em; zoom: 1; border: 1px solid #59b4d4; background: #0078a3 url(/images/ui-bg_glass_40_0078a3_1x400.png) 50% 50% repeat-x; font-weight: bold; color: #ffffff; }
+
 .ui-accordion .ui-accordion-icons { padding-left: 2.2em; }
 .ui-accordion .ui-accordion-noicons { padding-left: .7em; }
 .ui-accordion .ui-accordion-icons .ui-accordion-icons { padding-left: 2.2em; }
