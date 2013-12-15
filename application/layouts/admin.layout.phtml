@@ -14,7 +14,7 @@
 <meta name="Description" content="description, for seo purposes" />
 <meta name="Keywords" content="keyword 1, keyword 2" />
 
-<?= $this->partial('core.jscript.phtml'); ?>
+<?= $this->partial('admin.jscript.phtml'); ?>
 <?= $this->partial('admin.stylesheets.phtml'); ?>
 
 </head>
@@ -23,8 +23,19 @@
 
 <?= $this->partial('admin.toolbar.phtml'); ?>
 
+<div class="jhjk_frame">
+	<div class="jhjk_frame_logo"><a href="http://www.zempirians.com"><img src="/sthemes/0/img/logo-sm.png" class="tbar_icon" border="0"></a></div>
+</div>
+
 <div id="jhjk_layout">
-	<?= $this->layout()->content; ?>
+	<div id="jhjk_template">
+		<div class="jhjk_template_l">
+<?= $this->partial('admin.sidebar.phtml'); ?>
+		</div>
+		<div class="jhjk_template_r">
+<?= $this->layout()->content; ?>
+		</div>
+	</div>
 </div>
 
 </body>

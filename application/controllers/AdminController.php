@@ -11,6 +11,16 @@ class AdminController extends Zend_Controller_Action
 		if ($userInfo->rights < 3) {
 			$this->_redirect('shield/trap');
 		}
+
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+
+		$x_newapp    = $this->_helper->enrollment->newapp('worm');
+		$x_oldapp    = $this->_helper->enrollment->oldapp('worm');
+		$x_totalapp  = $x_newapp + $x_oldapp;
+
+		$wmf_ns->admin_new_enroll   = $x_newapp;
+		$wmf_ns->admin_old_enroll   = $x_oldapp;
+		$wmf_ns->admin_total_enroll = $x_totalapp;
 	}
 
 	function indexAction()
@@ -29,9 +39,6 @@ class AdminController extends Zend_Controller_Action
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$this->view->zempirian = $userInfo;
-
-		$this->view->ennew = $this->_helper->enrollment->newapp('worm');
-		$this->view->enold = $this->_helper->enrollment->oldapp('worm');
 
 		$picklayout = $this->_helper->layout->setLayout('admin.layout');
 	}

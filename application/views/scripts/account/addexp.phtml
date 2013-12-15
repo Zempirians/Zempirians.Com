@@ -2,14 +2,33 @@
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
 ?>
 
-<div class="s_account_table_0">
+<center>
 <form action="/account/submitexp" method="POST">
-	<div class="s_account_table_td0c">Name (ie: System Administrator):</div>
-	<div class="s_account_table_td0d"><input type="text" name="s_name" class="s_account_form_input0" /></div>
-	<div class="s_account_table_td0c">Years Exp (ie: 8 months or 8 years since obtained):</div>
-	<div class="s_account_table_td0d"><input type="text" name="s_exp" class="s_account_form_input0" /></div>
-	<div class="s_account_table_td0c">Extra details (ie: specify misc, job, etc):</div>
-	<div class="s_account_table_td0d"><input type="text" name="s_other" class="s_account_form_input0" /></div>
-	<div class="s_account_table_tr0b"><input type="submit" name="submit" value="Add" class="s_account_form_submit0"></div>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Add Experience</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Name (ie: System Administrator)</td>
+					<td><input type="text" name="s_name" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td>Years Exp (ie: 8 months or 8 years since obtained)</td>
+					<td><input type="text" name="s_exp" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td>Extra details (ie: specify misc, job, etc)</td>
+					<td><input type="text" name="s_other" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Add" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </form>
-</div>
+</center>

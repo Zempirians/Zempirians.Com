@@ -1,0 +1,40 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<ul id="adminMenu">
+	<li><a href="javascript:void(0);">Staff Enrollments (<?php echo $wmf_xs->admin_total_enroll; ?>)</a>
+		<ul>
+			<li><a href="/admin/newapps">New (<?php echo $wmf_xs->admin_new_enroll; ?>)</a></li>
+			<li>Old (<?php echo $wmf_xs->admin_old_enroll; ?>)</li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Academy Cirriculums (0)
+		<ul>
+			<li><a href="/admin/addmaster">Add</a></li>
+			<li>Edit</li>
+			<li>View</li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Academy Courses (0)</a>
+		<ul>
+			<li>Add</li>
+			<li>Edit</li>
+			<li>View</li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Academy Classes (0)</a>
+		<ul>
+			<li>Add</li>
+			<li>Edit</li>
+			<li>View</li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Academy Archives (0)</a>
+		<ul>
+			<li>Add</li>
+			<li>Edit</li>
+			<li>View</li>
+		</ul>
+	</li>
+</ul>
