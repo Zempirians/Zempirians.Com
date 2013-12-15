@@ -120,7 +120,8 @@ class Zend_Controller_Action_Helper_Accounts extends Zend_Controller_Action_Help
 				'username' => $new_email,
 				'password' => $new_passd,
 				'ip'       => $_SERVER['REMOTE_ADDR'],
-				'since'    => date("Y-m-d G:i:s")
+				'since'    => date("Y-m-d G:i:s"),
+				'rank'     => "student"
 			);
 			$db->insert('authorize', $set);
 

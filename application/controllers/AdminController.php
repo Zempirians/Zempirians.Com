@@ -59,17 +59,17 @@ class AdminController extends Zend_Controller_Action
 		$picklayout = $this->_helper->layout->setLayout('admin.layout');
 	}
 
-	function editappAction()
+	function appacceptAction()
 	{
 		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
 		$wmf_ns->page     = "admin";
-		$wmf_ns->mod      = "editapp";
+		$wmf_ns->mod      = "appaccept";
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
 		$wmf_ns->jdwidth  = "550";
 		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Editapps";
+		$wmf_ns->jdtitle  = "Admin.AppsAccept";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -79,7 +79,54 @@ class AdminController extends Zend_Controller_Action
 		$a = $this->getRequest()->getParam('stdin');
 		$boola = $this->_helper->shieldsup->paramnum($a);
 
-		if ($boola == "UGH") { $this->_redirect('shield/trap'); } else { $this->view->stdin = $a; }
+		if ($boola == "UGH") {
+			$this->_redirect('shield/trap');
+		}
+		else {
+			$resp = $this->_helper->enrollment->doaccept($a);
+			if ($resp == "YAY") {
+				$this->_redirect('admin/newapps');
+			}
+			else {
+				$this->_redirect('shield/trap');
+			}
+		}
+
+		$picklayout = $this->_helper->layout->setLayout('admin.layout');
+	}
+
+	function appdenyAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "admin";
+		$wmf_ns->mod      = "appdeny";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Admin.AppsDeny";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+
+		$a = $this->getRequest()->getParam('stdin');
+		$boola = $this->_helper->shieldsup->paramnum($a);
+
+		if ($boola == "UGH") {
+			$this->_redirect('shield/trap');
+		}
+		else {
+			$resp = $this->_helper->enrollment->dodeny($a);
+			if ($resp == "YAY") {
+				$this->_redirect('admin/newapps');
+			}
+			else {
+				$this->_redirect('shield/trap');
+			}
+		}
 
 		$picklayout = $this->_helper->layout->setLayout('admin.layout');
 	}

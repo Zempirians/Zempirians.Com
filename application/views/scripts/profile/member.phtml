@@ -1,60 +1,28 @@
 <?php
 	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
-	$skills   = $this->profileSkills('0',$this->zempirian->id);
-	$creds    = $this->profileSkills('1',$this->zempirian->id);
-	$exps     = $this->profileSkills('2',$this->zempirian->id);
-	$intrs    = $this->profileSkills('3',$this->zempirian->id);
+	$skills   = $this->profileSkills('0',$this->stdin);
+	$creds    = $this->profileSkills('1',$this->stdin);
+	$exps     = $this->profileSkills('2',$this->stdin);
+	$intrs    = $this->profileSkills('3',$this->stdin);
+	$info     = $this->profileInfo($this->stdin);
 ?>
 
 <center>
 	<div class="jhjk_table_3">
-		<div class="jhjk_tr_1">
-			<div class="b_title"><h2>Welcome</h2></div>
-			<div class="b_text">
-				All default sign ups officially rank you as a student of this Academy. You will also have access to all classworks by the Staff. It is very important that you keep your profile updated at all times, as this will qualify you for advanced LIVE classes!
-				<br /><br />
-				New public profile concept => <a href="/profile/member/?stdin=<?php echo $this->zempirian->id; ?>">click here</a>.
-			</div>
-		</div>
-	</div>
-
-	<div class="jhjk_table_3">
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="3">Account</th>
+					<th colspan="2">Profile: <?php echo $info["handle"]; ?></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Handle</td>
-					<td><?php echo $this->zempirian->handle; ?></td>
-					<td><a href="/account/handle">Change</a></td>
-				</tr>
-				<tr>
-					<td>Password</td>
-					<td>********</td>
-					<td><a href="/account/password">Change</a></td>
-				</tr>
-				<tr>
-					<td>Rights</td>
-					<td><?php echo $this->rightsLookup('w0rm'); ?></td>
-					<td></td>
-				</tr>
-				<tr>
 					<td>Since</td>
-					<td><?php echo $this->zempirian->since; ?></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td><?php echo $this->zempirian->email; ?></td>
-					<td></td>
+					<td><?php echo $info["since"]; ?></td>
 				</tr>
 				<tr>
 					<td>Points</td>
-					<td><?php echo $this->zempirian->points; ?></td>
-					<td></td>
+					<td><?php echo $info["points"]; ?></td>
 				</tr>
 			</tbody>
 		</table>
@@ -79,9 +47,7 @@
 <?php
 	}
 ?>
-				<tr>
-					<td colspan="2"><a href="/account/addskill">Add New Skill</a></td>
-				</tr>
+
 			</tbody>
 		</table>
 
@@ -105,9 +71,7 @@
 <?php
 	}
 ?>
-				<tr>
-					<td colspan="3"><a href="/account/addcred">Add New Credential</a></td>
-				</tr>
+
 			</tbody>
 		</table>
 	</div>
@@ -132,9 +96,7 @@
 <?php
 	}
 ?>
-				<tr>
-					<td colspan="3"><a href="/account/addexp">Add New Experience</a></td>
-				</tr>
+
 			</tbody>
 		</table>
 	</div>
@@ -159,9 +121,6 @@
 <?php
 	}
 ?>
-				<tr>
-					<td colspan="3"><a href="/account/addintr">Add New Interest</a></td>
-				</tr>
 			</tbody>
 		</table>
 	</div>
