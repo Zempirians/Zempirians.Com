@@ -15,16 +15,16 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 				$myvalue = "executive";
 				break;
 			case 4:
-				$myvalue = "admin";
+				$myvalue = "administrator";
 				break;
 			case 3:
-				$myvalue = "staff";
+				$myvalue = "dev team";
 				break;
 			case 2:
-				$myvalue = "student";
+				$myvalue = "teacher";
 				break;
 			case 1:
-				$myvalue = "user";
+				$myvalue = "student";
 				break;
 			default:
 				$myvalue = "guest";
@@ -65,7 +65,7 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 		return $x;
 	}
 
-	function enrollnow($a,$b,$c,$d,$e,$f,$g,$h)
+	function enrollnow($g,$h)
 	{
 		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
@@ -89,12 +89,6 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 		if (!$resultF["id"]) {
  			$set = array( 
 				'gid'        => $userInfo->id,
-				'age'        => $a,
-				'gender'     => $c,
-				'timezone'   => $b,
-				'reddit'     => $d,
-				'irc'        => $e,
-				'email'      => $f,
 				'position'   => $g,
 				'details'    => $h,
 				'en'         => "1",

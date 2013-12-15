@@ -16,13 +16,13 @@ class Zend_View_Helper_RightsLookup
 				$myvalue = "admin";
 				break;
 			case 3:
-				$myvalue = "staff";
+				$myvalue = "dev team";
 				break;
 			case 2:
-				$myvalue = "student";
+				$myvalue = "teacher";
 				break;
 			case 1:
-				$myvalue = "user";
+				$myvalue = "student";
 				break;
 			default:
 				$myvalue = "guest";
