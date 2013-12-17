@@ -1,0 +1,37 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<form action="/archive/submit" method="POST" enctype="multipart/form-data">
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Upload Archive (Material, ie: tutorials)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>File Title</td>
+					<td><input type="text" name="s_title" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td>File Description</td>
+					<td><input type="text" name="s_desc" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td>File to Upload</td>
+					<td><input type="file" name="s_file" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td colspan=2>Accepted extensions are: (*.txt | *.pdf). If you make something graphical just convert to PDF before uploading.</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Upload" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>
+</center>

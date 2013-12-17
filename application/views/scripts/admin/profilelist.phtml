@@ -1,0 +1,34 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Handle</th>
+		<th>Position</th>
+		<th>Joined</th>
+		<th>Points</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$resultB = $this->newlist;
+		foreach ($resultB as $result) {
+			$info = $this->profileInfo($result["id"]);
+?>
+	<tr>
+		<td><a href="/profile/member/?stdin=<?php echo $result["id"]; ?>">View Profile</a></td>
+		<td><?php echo $info["handle"]; ?></td>
+		<td><?php echo $result["rank"]; ?></td>
+		<td><?php echo $result["since"]; ?></td>
+		<td><?php echo $result["points"]; ?></td>
+	</tr>
+<?php
+		}
+?>
+</tbody>
+</table>
+
+</div>
