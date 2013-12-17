@@ -1,0 +1,40 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<script src="/jscript/jquery-1.8.3.js"></script>
+<script src="/jscript/jquery-ui-1.9.1.custom.js"></script>
+<script src="/jscript/jquery.tablesorter.min.js"></script>
+
+<script>
+	function mainmenu(){
+		$(" #nav ul ").css({display: "none"}); // Opera Fix
+		$(" #nav li ").hover(function(){
+			$(this).find('ul:first').css({visibility: "visible",display: "none"}).show(400);
+			},function(){
+			$(this).find('ul:first').css({visibility: "hidden"});
+		});
+	}
+
+	$(document).ready(function(){
+		mainmenu();
+	});
+
+	$(function() {		
+		$("#grida").tablesorter({widgets: ['zebra']});
+		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
+	});
+
+	$(function() {		
+		$("#gridb").tablesorter({widgets: ['zebra']});
+	});
+
+	$(function() {
+		$( "#dialog" ).dialog({ width: <?php echo $wmf_xs->jdwidth; ?>,	height: <?php echo $wmf_xs->jdheight; ?>, title: "<?php echo $wmf_xs->jdtitle; ?>" });
+	});
+
+	$(function () {
+   		$('#adminMenu').accordion({ active: 0, collapsible: true, navigation: true, clearStyle: true });
+		$('.single-menu-item').unbind('click');
+	});
+</script>

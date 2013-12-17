@@ -1,0 +1,20 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<ul id="adminMenu">
+	<li><a href="javascript:void(0);">Academy Participation</a>
+		<ul>
+			<li>Create a new lesson!</li>
+			<li><a href="/archive/upload">Upload new material</a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Academy Structure</a>
+		<ul>
+			<li><a href="/staff/curriculum">Academy Curriculums (<?php echo $this->staffAcademy("1"); ?>)</a></li>
+			<li><a href="/staff/course">Academy Courses (<?php echo $this->staffAcademy("2"); ?>)</a></li>
+			<li><a href="/staff/lesson">Academy Lessons (<?php echo $this->staffAcademy("3"); ?>)</a></li>
+		</ul>
+	</li>
+</ul>
+

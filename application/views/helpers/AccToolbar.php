@@ -51,7 +51,7 @@ class Zend_View_Helper_AccToolbar
 			else {
 				// User must Enroll
 				if ($userInfo->rights == 1) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/enroll/app\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Click to Participate!&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/enroll/app\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Enrollment Form for Helpers&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 
@@ -82,6 +82,30 @@ class Zend_View_Helper_AccToolbar
 			}
 			else {
 				if ($userInfo->rights >= 3) {
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Switch Back&nbsp;</a></li>";
+					$html .= "	        <div class=\"tbar_sep\"></div>\n";
+				}
+			}
+		}
+
+		if ($str == "staff") {
+			if (!Zend_Auth::getInstance()->hasIdentity()) {
+				// NULL
+			}
+			else {
+				if ($userInfo->rights >= 2) {
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Switch Back&nbsp;</a></li>";
+					$html .= "	        <div class=\"tbar_sep\"></div>\n";
+				}
+			}
+		}
+
+		if ($str == "student") {
+			if (!Zend_Auth::getInstance()->hasIdentity()) {
+				// NULL
+			}
+			else {
+				if ($userInfo->rights > 0) {
 					$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Switch Back&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}

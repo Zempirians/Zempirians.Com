@@ -46,7 +46,7 @@ class Zend_Controller_Action_Helper_Enrollment extends Zend_Controller_Action_He
 		return $resultF["hax"];
 	}
 
-	function oldapp($str)
+	function acceptapp($str)
 	{
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$xray   = Zend_Registry::getInstance();
@@ -59,12 +59,33 @@ class Zend_Controller_Action_Helper_Enrollment extends Zend_Controller_Action_He
 		$db = Zend_Db::factory('Pdo_Mysql', $config);
 
 		$queryF = $db->select()
-			->from('profile_app', array("hax"=>"COUNT(*)"))
-			->where('admin_vote > ?', '0');
-		$resultF = $db->fetchRow($queryF);
+			->from('profile_app')
+			->where('admin_vote = ?', '1');
+		$resultF = $db->fetchAll($queryF);
 		$queryF->reset();
 
-		return $resultF["hax"];
+		return $resultF;
+	}
+
+	function refuseapp($str)
+	{
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$queryF = $db->select()
+			->from('profile_app')
+			->where('admin_vote = ?', '2');
+		$resultF = $db->fetchAll($queryF);
+		$queryF->reset();
+
+		return $resultF;
 	}
 
 	function doaccept($str)

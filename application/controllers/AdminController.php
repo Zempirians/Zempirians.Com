@@ -11,16 +11,6 @@ class AdminController extends Zend_Controller_Action
 		if ($userInfo->rights < 3) {
 			$this->_redirect('shield/trap');
 		}
-
-		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
-
-		$x_newapp    = $this->_helper->enrollment->newapp('worm');
-		$x_oldapp    = $this->_helper->enrollment->oldapp('worm');
-		$x_totalapp  = $x_newapp + $x_oldapp;
-
-		$wmf_ns->admin_new_enroll   = $x_newapp;
-		$wmf_ns->admin_old_enroll   = $x_oldapp;
-		$wmf_ns->admin_total_enroll = $x_totalapp;
 	}
 
 	function indexAction()
@@ -138,5 +128,117 @@ class AdminController extends Zend_Controller_Action
 		$picklayout = $this->_helper->layout->setLayout('admin.layout');
 	}
 
+	function acceptappsAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "admin";
+		$wmf_ns->mod      = "acceptapps";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Admin.Newapps";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+
+		$this->view->newlist = $this->_helper->enrollment->acceptapp('worm');
+
+		$picklayout = $this->_helper->layout->setLayout('admin.layout');
+	}
+
+	function refuseappsAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "admin";
+		$wmf_ns->mod      = "refuseapps";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Admin.RefuseApps";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+
+		$this->view->newlist = $this->_helper->enrollment->refuseapp('worm');
+
+		$picklayout = $this->_helper->layout->setLayout('admin.layout');
+	}
+
+
+	function profilelistAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "admin";
+		$wmf_ns->mod      = "profilelist";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Admin.RefuseApps";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+
+		$a = $this->getRequest()->getParam('stdin');
+		$boola = $this->_helper->shieldsup->paramnum($a);
+		if ($boola == "YAY") {
+			$newlist = $this->_helper->admin->profilelist($a);
+			if ($newlist == "ugh") {
+				 $this->_redirect('shield/trap');	
+			}
+			else {
+				$this->view->newlist = $newlist;
+			}
+		}
+		else { $this->_redirect('shield/trap');	}
+
+
+		$picklayout = $this->_helper->layout->setLayout('admin.layout');
+	}
+
+	function archivelistAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "admin";
+		$wmf_ns->mod      = "archivelist";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Admin.Archives";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+
+		$a = $this->getRequest()->getParam('stdin');
+		$boola = $this->_helper->shieldsup->paramnum($a);
+		if ($boola == "YAY") {
+			$newlist = $this->_helper->admin->archivelist($a);
+			if ($newlist == "ugh") {
+				 $this->_redirect('shield/trap');	
+			}
+			else {
+				$this->view->newlist = $newlist;
+			}
+		}
+		else { $this->_redirect('shield/trap');	}
+
+
+		$picklayout = $this->_helper->layout->setLayout('admin.layout');
+	}
 
 }

@@ -3,15 +3,16 @@
 ?>
 
 <ul id="adminMenu">
-	<li><a href="javascript:void(0);">Staff Enrollments (<?php echo $wmf_xs->admin_total_enroll; ?>)</a>
+	<li><a href="javascript:void(0);">Staff Enrollments (<?php echo $this->adminEnroll("total"); ?>)</a>
 		<ul>
-			<li><a href="/admin/newapps">New (<?php echo $wmf_xs->admin_new_enroll; ?>)</a></li>
-			<li>Old (<?php echo $wmf_xs->admin_old_enroll; ?>)</li>
+			<li><a href="/admin/newapps">New (<?php echo $this->adminEnroll("0"); ?>)</a></li>
+			<li><a href="/admin/acceptapps">Accepted (<?php echo $this->adminEnroll("1"); ?>)</a></li>
+			<li><a href="/admin/refuseapps">Refused (<?php echo $this->adminEnroll("2"); ?>)</a></li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Cirriculums (0)
+	<li><a href="javascript:void(0);">Academy Curriculums (0)</a>
 		<ul>
-			<li><a href="/admin/addmaster">Add</a></li>
+			<li>Add</li>
 			<li>Edit</li>
 			<li>View</li>
 		</ul>
@@ -23,18 +24,30 @@
 			<li>View</li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Classes (0)</a>
+	<li><a href="javascript:void(0);">Academy Lessons (0)</a>
 		<ul>
 			<li>Add</li>
 			<li>Edit</li>
 			<li>View</li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Archives (0)</a>
+	<li><a href="javascript:void(0);">Academy Archives (<?php echo $this->adminArchive('total'); ?>)</a>
 		<ul>
-			<li>Add</li>
-			<li>Edit</li>
-			<li>View</li>
+			<li><a href="/admin/archivelist/?stdin=1">TXT (<?php echo $this->adminArchive('txt'); ?>)</a></li>
+			<li><a href="/admin/archivelist/?stdin=2">PDF (<?php echo $this->adminArchive('pdf'); ?>)</a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Profiles (<?php echo $this->adminProfile('total'); ?>)</a>
+		<ul>
+			<li><a href="/admin/profilelist/?stdin=1">Artists (<?php echo $this->adminProfile('artist'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=2">Developers (<?php echo $this->adminProfile('developer'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=3">Directors (<?php echo $this->adminProfile('director'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=4">Founders (<?php echo $this->adminProfile('founder'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=5">IRC Admins (<?php echo $this->adminProfile('irc_admin'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=6">Students (<?php echo $this->adminProfile('student'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=7">Teachers (<?php echo $this->adminProfile('teacher'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=8">Wargame Admins (<?php echo $this->adminProfile('wargame_admin'); ?>)</a></li>
+			<li><a href="/admin/profilelist/?stdin=9">Writers (<?php echo $this->adminProfile('writer'); ?>)</a></li>
 		</ul>
 	</li>
 </ul>
