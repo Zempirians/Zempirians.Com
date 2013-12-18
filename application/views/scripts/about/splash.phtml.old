@@ -1,0 +1,31 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+	<div class="jhjk_table_2">
+		<div class="jhjk_td_4">
+			<div class="x_title"><h2>Students</h2></div>
+			<div class="x_text">To become a certified student of this Academy, you must be enrolled. Once you are enrolled you will be able to sign up for classes and begin the learning!</div>
+		</div>
+		<div class="jhjk_td_5">
+			<div class="x_title"><h2>Teachers</h2></div>
+			<div class="x_text">To become a part of Staff for this Academy, you must submit a resume to our HR/PR Director. Once approved your account will be upgrade.</div>
+		</div>
+		<div class="jhjk_td_6">
+			<div class="x_title"><h2>Developers</h2></div>
+			<div class="x_text">Participate in various fields with our development teams. We accept: Artists, Writers and more.</div>
+		</div>
+	</div>
+	<div class="jhjk_table_2">
+		<div class="jhjk_td_4">
+			<div class="x_text"><a href="#" class="x_link">Read more >></a></div>
+		</div>
+		<div class="jhjk_td_5">
+			<div class="x_text"><a href="#" class="x_link">Read more >></a></div>
+		</div>
+		<div class="jhjk_td_6">
+			<div class="x_text"><a href="#" class="x_link">Read more >></a></div>
+		</div>
+	</div>
+</center>

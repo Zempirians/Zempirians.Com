@@ -44,5 +44,41 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 
 		return $x;
 	}
+
+	function listall($str)
+	{
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		switch ($str) {
+			case 1:
+				$queryF = $db->select()
+					->from('archives')
+					->where('type = ?', "txt")
+					->orwhere('type = ?', "pdf")
+					->where('en = ?', "1");
+				break;
+			default:
+				$myvalue = "ugh";
+				break;
+		}
+
+		if ($myvalue == "ugh") {
+			$resultF = "ugh";
+		}
+		else {
+			$resultF = $db->fetchAll($queryF);
+			$queryF->reset();
+		}
+
+		return $resultF;
+	}
 }
 

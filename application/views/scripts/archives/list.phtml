@@ -1,0 +1,34 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th>File Name</th>
+					<th>File Type</th>
+					<th>File Timestamp</th>
+					<th>File Author</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($this->xlist as $arch) {
+		$info = $this->profileInfo($arch["gid"]);
+?>
+				<tr>
+					<td><a href="/archives/<?php echo $arch["gid"]."_".$arch["id"].".".$arch["type"]; ?>"><?php echo $arch["title"]; ?></a></td>
+					<td><?php echo $arch["type"]; ?></td>
+					<td><?php echo $arch["created"]; ?></td>
+					<td><a href="/profile/member/?stdin=<?php echo $arch["gid"]; ?>"><?php echo $info["handle"]; ?></a></td>
+				</tr>
+<?php
+	}
+?>
+			</tbody>
+		</table>
+	</div>
+</center>

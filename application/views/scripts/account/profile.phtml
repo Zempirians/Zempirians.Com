@@ -4,6 +4,7 @@
 	$creds    = $this->profileSkills('1',$this->zempirian->id);
 	$exps     = $this->profileSkills('2',$this->zempirian->id);
 	$intrs    = $this->profileSkills('3',$this->zempirian->id);
+	$archs    = $this->profileArchives($this->zempirian->id);
 ?>
 
 <center>
@@ -161,6 +162,32 @@
 ?>
 				<tr>
 					<td colspan="3"><a href="/account/addintr">Add New Interest</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Archives</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($archs as $arch) {
+?>
+				<tr>
+					<td><a href="/archives/<?php echo $arch["gid"]."_".$arch["id"].".".$arch["type"]; ?>"><?php echo $arch["title"]; ?></a></td>
+					<td><?php echo $arch["created"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="2"><a href="/archive/upload">Add New Archive</a></td>
 				</tr>
 			</tbody>
 		</table>
