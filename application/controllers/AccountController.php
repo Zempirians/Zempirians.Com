@@ -126,7 +126,6 @@ class AccountController extends Zend_Controller_Action
 
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$this->view->zempirian = $userInfo;
-		$picklayout = $this->_helper->accounts->layout('password');
 		$picklayout = $this->_helper->layout->setLayout('account.layout');
 
 		$pass1 = $this->getRequest()->getParam('pass1');
@@ -375,6 +374,68 @@ class AccountController extends Zend_Controller_Action
 			$b = $this->_helper->shieldsup->paramfilter($b);
 			$c = $this->_helper->shieldsup->paramfilter($c);
 			$hack = $this->_helper->myprofile->addintr($a,$b,$c);
+			if ($hack == "YAY") { $this->_redirect('account/profile'); }
+		}
+		else { $this->_redirect('shield/trap');	}
+	}
+
+	function rmskillAction()
+	{
+		$wmf_ns          = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page    = "account";
+		$wmf_ns->mod     = "rmskill";
+		$wmf_ns->descrip = "submit";
+		$wmf_ns->grant   = "yes";
+		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth 	= "630";
+		$wmf_ns->jdheight	= "275";
+		$wmf_ns->jdtitle	= "Password is now changed";
+		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
+		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+		$picklayout = $this->_helper->layout->setLayout('account.layout');
+
+		$a = $this->getRequest()->getParam('stdin');
+		$boola = $this->_helper->shieldsup->paramnum($a);
+		if ($boola == "YAY") {
+			$hack = $this->_helper->myprofile->rmskill($a);
+			if ($hack == "YAY") { $this->_redirect('account/profile'); }
+		}
+		else { $this->_redirect('shield/trap');	}
+	}
+
+	function rmfileAction()
+	{
+		$wmf_ns          = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page    = "account";
+		$wmf_ns->mod     = "rmfile";
+		$wmf_ns->descrip = "submit";
+		$wmf_ns->grant   = "yes";
+		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth 	= "630";
+		$wmf_ns->jdheight	= "275";
+		$wmf_ns->jdtitle	= "Password is now changed";
+		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
+		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+		$picklayout = $this->_helper->layout->setLayout('account.layout');
+
+		$a = $this->getRequest()->getParam('stdin');
+		$boola = $this->_helper->shieldsup->paramnum($a);
+		if ($boola == "YAY") {
+			$hack = $this->_helper->myprofile->rmfile($a);
 			if ($hack == "YAY") { $this->_redirect('account/profile'); }
 		}
 		else { $this->_redirect('shield/trap');	}

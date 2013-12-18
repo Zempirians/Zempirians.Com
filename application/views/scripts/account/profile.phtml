@@ -65,7 +65,7 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="2">Skills</th>
+					<th colspan="3">Skills</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -76,12 +76,13 @@
 				<tr>
 					<td><?php echo $skill["skill"]; ?></td>
 					<td><?php echo $skill["years"]; ?></td>
+					<td><a href="/account/rmskill/?stdin=<?php echo $skill["id"]; ?>">Delete</a></td>
 				</tr>
 <?php
 	}
 ?>
 				<tr>
-					<td colspan="2"><a href="/account/addskill">Add New Skill</a></td>
+					<td colspan="3"><a href="/account/addskill">Add New Skill</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -90,7 +91,7 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="3">Credentials</th>
+					<th colspan="4">Credentials</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -102,12 +103,13 @@
 					<td><?php echo $cred["skill"]; ?></td>
 					<td><?php echo $cred["years"]; ?></td>
 					<td><?php echo $cred["other"]; ?></td>
+					<td><a href="/account/rmskill/?stdin=<?php echo $cred["id"]; ?>">Delete</a></td>
 				</tr>
 <?php
 	}
 ?>
 				<tr>
-					<td colspan="3"><a href="/account/addcred">Add New Credential</a></td>
+					<td colspan="4"><a href="/account/addcred">Add New Credential</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -117,7 +119,7 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="3">Experience</th>
+					<th colspan="4">Experience</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -129,12 +131,13 @@
 					<td><?php echo $exp["skill"]; ?></td>
 					<td><?php echo $exp["years"]; ?></td>
 					<td><?php echo $exp["other"]; ?></td>
+					<td><a href="/account/rmskill/?stdin=<?php echo $exp["id"]; ?>">Delete</a></td>
 				</tr>
 <?php
 	}
 ?>
 				<tr>
-					<td colspan="3"><a href="/account/addexp">Add New Experience</a></td>
+					<td colspan="4"><a href="/account/addexp">Add New Experience</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -144,7 +147,7 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="3">Interests</th>
+					<th colspan="4">Interests</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -156,12 +159,13 @@
 					<td><?php echo $intr["skill"]; ?></td>
 					<td><?php echo $intr["years"]; ?></td>
 					<td><?php echo $intr["other"]; ?></td>
+					<td><a href="/account/rmskill/?stdin=<?php echo $intr["id"]; ?>">Delete</a></td>
 				</tr>
 <?php
 	}
 ?>
 				<tr>
-					<td colspan="3"><a href="/account/addintr">Add New Interest</a></td>
+					<td colspan="4"><a href="/account/addintr">Add New Interest</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -171,7 +175,7 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
-					<th colspan="2">Archives</th>
+					<th colspan="3">Archives</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -182,12 +186,13 @@
 				<tr>
 					<td><a href="/archives/<?php echo $arch["gid"]."_".$arch["id"].".".$arch["type"]; ?>"><?php echo $arch["title"]; ?></a></td>
 					<td><?php echo $arch["created"]; ?></td>
+					<td><a href="/account/rmfile/?stdin=<?php echo $arch["id"]; ?>">Delete</a></td>
 				</tr>
 <?php
 	}
 ?>
 				<tr>
-					<td colspan="2"><a href="/archive/upload">Add New Archive</a></td>
+					<td colspan="3"><a href="/archive/upload">Add New Archive</a></td>
 				</tr>
 			</tbody>
 		</table>

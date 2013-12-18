@@ -32,9 +32,7 @@ class ProfileController extends Zend_Controller_Action
 			if ($hack != "YAY") {
 				$this->_redirect('shield/trap');
 			}
-			else {
-				$this->view->stdin = $a;
-			}
+			else { $this->view->stdin = $a; }
 		}
 		else { $this->_redirect('shield/trap');	}
 	}

@@ -5,6 +5,7 @@
 	$exps     = $this->profileSkills('2',$this->stdin);
 	$intrs    = $this->profileSkills('3',$this->stdin);
 	$info     = $this->profileInfo($this->stdin);
+	$archs    = $this->profileArchives($this->stdin);
 ?>
 
 <center>
@@ -124,4 +125,32 @@
 			</tbody>
 		</table>
 	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th>File Name</th>
+					<th>File Type</th>
+					<th>File Timestamp</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($archs as $arch) {
+		$info = $this->profileInfo($arch["gid"]);
+?>
+				<tr>
+					<td><a href="/archives/<?php echo $arch["gid"]."_".$arch["id"].".".$arch["type"]; ?>"><?php echo $arch["title"]; ?></a></td>
+					<td><?php echo $arch["type"]; ?></td>
+					<td><?php echo $arch["created"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+			</tbody>
+		</table>
+	</div>
+
 </center>
