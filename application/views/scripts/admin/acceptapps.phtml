@@ -19,7 +19,7 @@
 			$info = $this->profileInfo($result["gid"]);
 ?>
 	<tr>
-		<td><?php echo $info["handle"]; ?></td>
+		<td><a href="/profile/member/?stdin=<?php echo $result["gid"]; ?>"><?php echo $info["handle"]; ?></a></td>
 		<td><?php echo $result["position"]; ?></td>
 		<td><?php echo $result["details"]; ?></td>
 		<td><?php echo $result["create"]; ?></td>

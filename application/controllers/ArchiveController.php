@@ -8,10 +8,9 @@ class ArchiveController extends Zend_Controller_Action
 			$this->_redirect('shield/login');
 		}
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
-		if ($userInfo->rights < 2) {
+		if ($userInfo->rights < 1) {
 			$this->_redirect('shield/trap');
 		}
-
 	}
 
 	function uploadAction()
@@ -31,7 +30,7 @@ class ArchiveController extends Zend_Controller_Action
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$this->view->zempirian = $userInfo;
 
-		$picklayout = $this->_helper->layout->setLayout('staff.layout');
+		$picklayout = $this->_helper->layout->setLayout('account.layout');
 	}
 
 
@@ -66,10 +65,8 @@ class ArchiveController extends Zend_Controller_Action
 			$a = $this->_helper->shieldsup->paramfilter($a);
 			$b = $this->_helper->shieldsup->paramfilter($b);
 			$hack = $this->_helper->myarchive->addfile($a,$b,$_FILES["s_file"]["tmp_name"],$ext);
-			if ($hack == "YAY") { $this->_redirect('staff/index'); }
+			if ($hack == "YAY") { $this->_redirect('account/profile'); }
 		}
 		else { $this->_redirect('shield/trap');	}
-
-		$picklayout = $this->_helper->layout->setLayout('staff.layout');
 	}
 }
