@@ -58,6 +58,11 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 		$db = Zend_Db::factory('Pdo_Mysql', $config);
 
 		switch ($str) {
+			case 0:
+				$queryF = $db->select()
+					->from('archives')
+					->where('en = ?', "1");
+				break;
 			case 1:
 				$queryF = $db->select()
 					->from('archives')

@@ -234,5 +234,61 @@ class Zend_Controller_Action_Helper_Myprofile extends Zend_Controller_Action_Hel
 		return $x;
 	}
 
+	function rmskill($a)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'en' => "0"
+		);
+		$where = array();
+		$where[] = $db->quoteInto('id = ?', $a);
+		$where[] = $db->quoteInto('gid = ?', $userInfo->id);
+		$db->update('profile_skills', $set, $where);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
+	function rmfile($a)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		$set = array( 
+			'en' => "0"
+		);
+		$where = array();
+		$where[] = $db->quoteInto('id = ?', $a);
+		$where[] = $db->quoteInto('gid = ?', $userInfo->id);
+		$db->update('archives', $set, $where);
+
+		$x = "YAY";
+
+		return $x;
+	}
+
 }
 
