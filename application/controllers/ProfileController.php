@@ -30,7 +30,7 @@ class ProfileController extends Zend_Controller_Action
 		if ($boola == "YAY") {
 			$hack = $this->_helper->pubprofile->showme($a);
 			if ($hack != "YAY") {
-				$this->_redirect('shield/trap');
+				$this->view->stdin = "end";
 			}
 			else { $this->view->stdin = $a; }
 		}

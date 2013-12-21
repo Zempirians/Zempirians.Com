@@ -26,10 +26,19 @@ class Zend_View_Helper_AdminArchive
 	
 			$html = $resultF["hax"];
 		}
+		elseif ($str == "dead") {
+			$queryF = $db->select()
+				->from('archives', array("hax"=>"COUNT(*)"))
+				->where('en = ?', '0');
+			$resultF = $db->fetchRow($queryF);
+			$queryF->reset();
+	
+			$html = $resultF["hax"];
+		}
 		else {
 			$queryF = $db->select()
 				->from('archives', array("hax"=>"COUNT(*)"))
-				->where('type = ?', $str);
+				->where('en = ?', '1');
 			$resultF = $db->fetchRow($queryF);
 			$queryF->reset();
 	

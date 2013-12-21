@@ -98,10 +98,10 @@ class Zend_Controller_Action_Helper_Admin extends Zend_Controller_Action_Helper_
 
 		switch ($str) {
 			case 1:
-				$myvalue = "txt";
+				$myvalue = "1";
 				break;
-			case 2:
-				$myvalue = "pdf";
+			case 0:
+				$myvalue = "0";
 				break;
 			default:
 				$myvalue = "ugh";
@@ -114,7 +114,7 @@ class Zend_Controller_Action_Helper_Admin extends Zend_Controller_Action_Helper_
 		else {
 			$queryF = $db->select()
 				->from('archives')
-				->where('type = ?', $myvalue);
+				->where('en = ?', $myvalue);
 			$resultF = $db->fetchAll($queryF);
 			$queryF->reset();
 		}

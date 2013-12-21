@@ -26,6 +26,14 @@ class Zend_Controller_Action_Helper_Pubprofile extends Zend_Controller_Action_He
 
 		if (!$resultF["id"]) {
 			$x = "UGH";
+			$queryF = $db->select()
+				->from('authorize')
+				->where('id = ?', $str);
+			$resultF = $db->fetchRow($queryF);
+			$queryF->reset();
+			if (!$resultF["id"]) {
+				$x = "UGH";
+			} else { $x = "YAY"; }
 		}
 		else {
 			$x = "YAY";
