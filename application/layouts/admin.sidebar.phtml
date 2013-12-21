@@ -33,8 +33,8 @@
 	</li>
 	<li><a href="javascript:void(0);">Academy Archives (<?php echo $this->adminArchive('total'); ?>)</a>
 		<ul>
-			<li><a href="/admin/archivelist/?stdin=1">TXT (<?php echo $this->adminArchive('txt'); ?>)</a></li>
-			<li><a href="/admin/archivelist/?stdin=2">PDF (<?php echo $this->adminArchive('pdf'); ?>)</a></li>
+			<li><a href="/admin/archivelist/?stdin=1">ACTIVE (<?php echo $this->adminArchive('all'); ?>)</a></li>
+			<li><a href="/admin/archivelist/?stdin=0">DELETED (<?php echo $this->adminArchive('dead'); ?>)</a></li>
 		</ul>
 	</li>
 	<li><a href="javascript:void(0);">Profiles (<?php echo $this->adminProfile('total'); ?>)</a>
