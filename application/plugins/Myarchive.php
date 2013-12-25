@@ -4,7 +4,7 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 {
 	function direct() {}
 
-	function addfile($name,$desc,$file,$ext)
+	function addfile($name,$desc,$level,$file,$ext)
 	{
 		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
@@ -31,7 +31,8 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 				'en'         => "1",
 				'admin_id'   => "0",
 				'admin_vote' => "0",
-				'admin_date' => "0000-00-00 00:00:00"
+				'admin_date' => "0000-00-00 00:00:00",
+				'level'      => $level
 			);
 			$db->insert('archives', $set);
 			$newid = $db->lastInsertId();
@@ -57,10 +58,18 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 		);
 		$db = Zend_Db::factory('Pdo_Mysql', $config);
 
+		if (!$userInfo) {
+			$rights = "0";
+		}
+		else {
+			$rights = $userInfo->rights;
+		}
+
 		switch ($str) {
 			case 0:
 				$queryF = $db->select()
 					->from('archives')
+					->where('level <= ?', $rights)
 					->where('en = ?', "1");
 				break;
 			case 1:
@@ -68,6 +77,7 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 					->from('archives')
 					->where('type = ?', "txt")
 					->orwhere('type = ?', "pdf")
+					->where('level <= ?', $rights)
 					->where('en = ?', "1");
 				break;
 			default:

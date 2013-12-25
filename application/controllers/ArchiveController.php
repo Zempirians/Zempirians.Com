@@ -53,18 +53,21 @@ class ArchiveController extends Zend_Controller_Action
 
 		$a = $this->getRequest()->getParam('s_title');
 		$b = $this->getRequest()->getParam('s_desc');
+		$c = $this->getRequest()->getParam('s_level');
 
 		$boola = $this->_helper->shieldsup->paramtxt($a);
 		$boolb = $this->_helper->shieldsup->paramtxt($b);
+		$boolc = $this->_helper->shieldsup->paramnum($c);
 
 		$allowext = array("txt", "pdf");
 		$temp     = explode(".", $_FILES["s_file"]["name"]);
 		$ext      = end($temp);
 
-		if ($boola == "YAY" && $boolb == "YAY" && in_array($ext, $allowext)) {
+		if ($boola == "YAY" && $boolb == "YAY" && $boolc == "YAY" && in_array($ext, $allowext)) {
 			$a = $this->_helper->shieldsup->paramfilter($a);
 			$b = $this->_helper->shieldsup->paramfilter($b);
-			$hack = $this->_helper->myarchive->addfile($a,$b,$_FILES["s_file"]["tmp_name"],$ext);
+			$c = $this->_helper->shieldsup->paramfilter($c);
+			$hack = $this->_helper->myarchive->addfile($a,$b,$c,$_FILES["s_file"]["tmp_name"],$ext);
 			if ($hack == "YAY") { $this->_redirect('account/profile'); }
 		}
 		else { $this->_redirect('shield/trap');	}
