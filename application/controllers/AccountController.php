@@ -379,6 +379,63 @@ class AccountController extends Zend_Controller_Action
 		else { $this->_redirect('shield/trap');	}
 	}
 
+	function addhistAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "account";
+		$wmf_ns->mod      = "histadd";
+		$wmf_ns->descrip  = "click";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Add a new skill to your profile";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+		$picklayout = $this->_helper->layout->setLayout('account.layout');
+	}
+
+	function submithistAction()
+	{
+		$wmf_ns           = new Zend_Session_Namespace('SPLOIT');
+		$wmf_ns->page     = "account";
+		$wmf_ns->mod      = "hist:add";
+		$wmf_ns->descrip  = "submit";
+		$wmf_ns->grant    = "yes";
+		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
+		$wmf_ns->jdwidth  = "550";
+		$wmf_ns->jdheight = "420";
+		$wmf_ns->jdtitle  = "Engine";
+		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+
+		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
+
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$this->view->zempirian = $userInfo;
+		$picklayout = $this->_helper->layout->setLayout('account.layout');
+
+		//$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
+		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
+
+		$a = $this->getRequest()->getParam('s_name');
+		$b = $this->getRequest()->getParam('s_other');
+
+		$boola = $this->_helper->shieldsup->paramtxt($a);
+		$boolb = $this->_helper->shieldsup->paramtxt($b);
+
+		if ($boola == "YAY" && $boolb == "YAY") {
+			$a = $this->_helper->shieldsup->paramfilter($a);
+			$b = $this->_helper->shieldsup->paramfilter($b);
+			$hack = $this->_helper->myprofile->addhist($a,$b);
+			if ($hack == "YAY") { $this->_redirect('account/profile'); }
+		}
+		else { $this->_redirect('shield/trap');	}
+	}
+
 	function rmskillAction()
 	{
 		$wmf_ns          = new Zend_Session_Namespace('SPLOIT');

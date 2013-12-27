@@ -61,6 +61,17 @@ class Zend_View_Helper_ProfileSkills
 			$queryF->reset();
 		}
 
+		// 4 = History for display object
+		if ($str == "4") {			
+			$queryF = $db->select()
+				->from('profile_skills')
+				->where('place = ?', $str)
+				->where('gid = ?', $gid)
+				->where('en = ?', '1');
+			$resultF = $db->fetchAll($queryF);
+			$queryF->reset();
+		}
+
 		// OUTPUT HTML SOURCE
 		return $resultF;
 	}

@@ -6,6 +6,7 @@
 	$intrs    = $this->profileSkills('3',$this->stdin);
 	$info     = $this->profileInfo($this->stdin);
 	$archs    = $this->profileArchives($this->stdin);
+	$hist    = $this->profileSkills('4',$this->stdin);
 
 ?>
 
@@ -34,6 +35,30 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
+					<th colspan="2">History</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($hist as $history) {
+?>
+				<tr>
+					<td><?php echo $history["skill"]; ?></td>
+					<td><?php echo $history["other"]; ?></td>
+				</tr>
+<?php
+	}
+?>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
 					<th colspan="2">Skills</th>
 				</tr>
 			</thead>
@@ -52,6 +77,7 @@
 
 			</tbody>
 		</table>
+	</div>
 
 	<div class="jhjk_table_3">
 		<table id="grida" class="tablesorter">

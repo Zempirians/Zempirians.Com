@@ -32,7 +32,8 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 				'admin_id'   => "0",
 				'admin_vote' => "0",
 				'admin_date' => "0000-00-00 00:00:00",
-				'level'      => $level
+				'level'      => $level,
+				'archive'    => "1"
 			);
 			$db->insert('archives', $set);
 			$newid = $db->lastInsertId();
@@ -75,8 +76,7 @@ class Zend_Controller_Action_Helper_Myarchive extends Zend_Controller_Action_Hel
 			case 1:
 				$queryF = $db->select()
 					->from('archives')
-					->where('type = ?', "txt")
-					->orwhere('type = ?', "pdf")
+					->where('archive = ?', "1")
 					->where('level <= ?', $rights)
 					->where('en = ?', "1");
 				break;
