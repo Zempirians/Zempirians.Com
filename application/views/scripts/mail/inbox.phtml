@@ -1,0 +1,41 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+	<div class="jhjk_table_3">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>From</th>
+		<th>Subject</th>
+		<th>Timestamp</th>
+		<th colspan=4>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+	$mails = $this->warInbox("all");
+	foreach ($mails as $mail) {
+		echo "<tr>";
+		echo "<td>". $this->memberLookup($mail["send_id"]) ."</td>";
+		echo "<td><a href=\"/mail/read?stdin=". $mail["id"] ."\" class=\"inbox_link\">". $mail["subject"] ."</a></td>";
+		echo "<td>". $mail["created"] ."</td>";
+		$check = $this->warInbox($mail["id"]);
+		if ($check == "YAY") {
+			echo "<td align=\"center\"><a href=\"/mail/read?stdin=". $mail["id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_open.png\" border=\"0\"></a></td>";
+		} else {
+			echo "<td align=\"center\"><a href=\"/mail/read?stdin=". $mail["id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_go.png\" border=\"0\"></a></td>";
+		}
+		echo "<td align=\"center\"><a href=\"/mail/kill?stdin=". $mail["id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_delete.png\" border=\"0\"></a></td>";
+		echo "<td align=\"center\"><a href=\"/mail/chat?stdin=". $mail["send_id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_link.png\" border=\"0\"></a></td>";
+		echo "<td align=\"center\"><a href=\"/mail/compose?stdin=". $mail["send_id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_edit.png\" border=\"0\"></a></td>";
+		echo "</tr>\n";
+	}
+?>
+</tbody>
+</table>
+
+	</div>
+</center>

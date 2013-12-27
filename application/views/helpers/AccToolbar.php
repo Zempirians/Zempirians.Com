@@ -31,8 +31,17 @@ class Zend_View_Helper_AccToolbar
 				$html .= "	</div>\n";
 			}
 			else {
+				$queryF = $db->select()
+					->from('war_inbox', array("xcount"=>"COUNT(*)"))
+					->where('recv_id = ?', $userInfo->id)
+					->where('en = ?', "1");
+				$resultF = $db->fetchRow($queryF);
+				$queryF->reset();
+
 				$html .= "	<div class=\"jhjk_toolbar_passport_css\">\n";
 				$html .= "	<ul id=\"nav\">\n";
+				$html .= "	        <div class=\"tbar_sep\"></div>\n";
+				$html .= "		<li class=\"tbar_menu\"><a href=\"/mail/inbox\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/note.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Messages (". $resultF["xcount"] .")&nbsp;&nbsp;</a>\n";
 				$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				$html .= "		<li class=\"tbar_menu\"><a href=\"/account/profile\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/vcard.png\" class=\"tbar_icon\" border=\"0\">&nbsp;My Account&nbsp;</a></li>";
 				$html .= "	        <div class=\"tbar_sep\"></div>\n";

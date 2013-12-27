@@ -6,6 +6,13 @@
 .jhjk_james_icon   { vertical-align: text-top; }
 .jhjk_james_sep    { display:block; position:relative; float:left; width:10px; }
 
+A.hack_button { color:#666; font-family:arial; font-size:10pt; font-weight:bold; padding:6px 24px; text-decoration:none; box-shadow:inset 0px 1px 0px 0px #ffffff; background-color:#ffffff; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; border:1px solid #dcdcdc; display:inline-block; }
+A.hack_button:link { color:#666; }
+A.hack_button:visited { color:#666; }
+A.hack_button:hover { background-color:#f6f6f6; color:#000; }
+A.hack_button:active { position:relative; top:1px; color:#000; }
+.hack_icon { vertical-align: text-top; border: 0; }
+
 /*
 ----------------------------------------------------------------------
 
@@ -148,3 +155,13 @@ ZEMPIRE // TICKET - Style Sheet
 /* REPORT SECTION */
 .z_ticket_table_0    { width:500px; height:auto; display:block; position:relative; border:2px solid #cdcdcd; padding: 25px 10px 25px 10px;}
 .z_ticket_table_td0a { width:480px; display:block; font-family:Tahoma; font-size:12pt; color:#000; text-align:left; }
+
+/*
+----------------------------------------------------------------------
+
+ZEMPIRE // MAIL - Style Sheet
+
+----------------------------------------------------------------------
+*/
+
+.s_mail_form_textarea { background-color:#fff; width:600px; position:relative; float:left; text-align:left; font-family:verdana; font-size:10pt; color:#000; height:100px; }

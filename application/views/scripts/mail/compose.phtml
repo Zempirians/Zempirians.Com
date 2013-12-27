@@ -1,0 +1,39 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$message = $this->log;
+?>
+
+<center>
+	<div class="jhjk_table_3">
+
+<form action="/mail/composesubmit" method="POST">
+<input type="hidden" name="id" value="<?php echo $message; ?>">
+
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Compose Message</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>To</td>
+					<td><?php echo $this->memberLookup($message); ?></td>
+				</tr>
+				<tr>
+					<td>Subject</td>
+					<td>Private Message</td>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td><textarea name="note" class="s_mail_form_textarea"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Send" class="s_mail_form_submit"></td>
+				</tr>
+			</tbody>
+		</table>
+</form>
+
+	</div>
+</center>
