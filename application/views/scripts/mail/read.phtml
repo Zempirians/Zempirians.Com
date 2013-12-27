@@ -1,0 +1,48 @@
+<?php
+	$wmf_xs  = new Zend_Session_Namespace('SPLOIT');
+	$message = $this->warInboxread($this->stdin);
+	$reply   = $this->warInboxreply($this->stdin);
+?>
+
+<center>
+	<div class="jhjk_table_3">
+
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Read Message</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>From</td>
+					<td><?php echo $this->memberLookup($message["send_id"]); ?></td>
+				</tr>
+				<tr>
+					<td>Subject</td>
+					<td><?php echo $message["subject"]; ?></td>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td>
+						<textarea name="note" class="s_mail_form_textarea">
+<?php
+	echo $message["note"];
+	if ($reply != "UGH") {
+		echo "\n\n";
+		echo ">> REPLIED ON " . $reply["created"] . "\n";
+		echo $reply["note"];
+	}
+?>
+						</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><a href="/mail/kill?stdin=<?php echo $message["id"]; ?>" class="hack_button">Delete</a> <a href="/mail/reply?stdin=<?php echo $message["id"]; ?>" class="hack_button">Reply</a> <a href="/mail/chat?stdin=<?php echo $message["send_id"]; ?>" class="hack_button">Log</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</center>

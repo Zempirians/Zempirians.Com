@@ -1,0 +1,28 @@
+<?php
+	$wmf_xs  = new Zend_Session_Namespace('SPLOIT');
+	$chats   = $this->warInboxlog($this->log);
+?>
+
+<center>
+	<div class="jhjk_table_3">
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Chat Log</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+	foreach ($chats as $chat) {
+
+		echo "<tr>";
+		echo "	<td>&lt;". $this->memberLookup($chat["send_id"]) ."&gt; ". $chat["note"] ."</td>";
+		echo "</tr>\n";
+	}
+?>
+</tbody>
+</table>
+
+	</div>
+</center>
