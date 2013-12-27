@@ -57,19 +57,19 @@ class Zend_View_Helper_AccToolbar
 
 				// Show Student Panel
 				if ($userInfo->rights >= 1) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/student/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Student Panel&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/student/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Student&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 
 				// Show Staff Panel
 				if ($userInfo->rights >= 2) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/staff/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Staff Panel&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/staff/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Staff&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 
 				// Show Admin Panel
 				if ($userInfo->rights >= 3) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/admin/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Admin Panel&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/admin/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Admin&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 

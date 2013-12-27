@@ -5,6 +5,7 @@
 	$exps     = $this->profileSkills('2',$this->zempirian->id);
 	$intrs    = $this->profileSkills('3',$this->zempirian->id);
 	$archs    = $this->profileArchives($this->zempirian->id);
+	$hist     = $this->profileSkills('4',$this->zempirian->id);
 ?>
 
 <center>
@@ -65,6 +66,33 @@
 		<table id="grida" class="tablesorter">
 			<thead>
 				<tr>
+					<th colspan="3">History</th>
+				</tr>
+			</thead>
+			<tbody>
+<?php
+
+	foreach ($hist as $history) {
+?>
+				<tr>
+					<td><?php echo $history["skill"]; ?></td>
+					<td><?php echo $history["other"]; ?></td>
+					<td><a href="/account/rmskill/?stdin=<?php echo $history["id"]; ?>">Delete</a></td>
+				</tr>
+<?php
+	}
+?>
+				<tr>
+					<td colspan="3"><a href="/account/addhist">Add New History</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
 					<th colspan="3">Skills</th>
 				</tr>
 			</thead>
@@ -86,6 +114,7 @@
 				</tr>
 			</tbody>
 		</table>
+	</div>
 
 	<div class="jhjk_table_3">
 		<table id="grida" class="tablesorter">
