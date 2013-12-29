@@ -1,0 +1,193 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$playinfo = $this->playinfo;
+
+if ($playinfo == "pending") {
+?>
+
+<div class="s_team_table_1">
+	<div class="s_team_table_tr1a"><img src="<?php echo $wmf_xs->dirtheme; ?>/img/shield-warning.png"></div>
+	<div class="s_team_table_tr1b">You have been invited to team "<strong><?php echo $this->teaminfo["name"]; ?></strong>".</div>
+	<div class="s_team_table_tr1c"><a href="/war/teamjoin?stdin=<?php echo $this->teaminfo["id"]; ?>" class="hack_button">Accept</a></div>
+	<div class="s_team_table_tr1d"><a href="/war/teamdeny?stdin=<?php echo $this->teaminfo["id"]; ?>" class="hack_button">Decline</a></div>
+</div>
+
+<?php
+} else {
+?>
+
+
+<table id="gridc" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Team - <?php echo $this->teaminfo["name"]; ?></th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>Team Chat 1</td><td>/server irc.zempirians.com 6667</td></tr>
+	<tr><td>Team Chat 2</td><td>/server irc.zempirians.com +6697</td></tr>
+	<tr><td>Team Chat 3</td><td><a href="http://chat.zempirians.com/?channels=#<?php echo $this->teaminfo["name"]; ?>" target="_new" style="color:#000;">http://chat.zempirians.com/?channels=#<?php echo $this->teaminfo["name"]; ?></a></td></tr>
+	<tr><td>Team Chat 4</td><td><a href="http://chat.zempirians.com/?channels=#howtohack" target="_new" style="color:#000;">http://chat.zempirians.com/?channels=#howtohack</a></td></tr>
+</tbody>
+</table>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Member</th>
+		<th>Points</th>
+		<th>Status</th>
+		<th colspan="3">Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$members = $this->teamLookup($this->teaminfo["id"]);
+		foreach ($members as $member) {
+			echo "<tr>";
+			echo "<td>". $this->memberLookup($member["user_id"]) ."</td>";
+			echo "<td align=\"center\">". $member["points"] ."</td>";
+			echo "<td align=\"center\">". $member["status"] ."</td>";
+			echo "<td align=\"center\"><a href=\"/war/kick?stdin=". $member["user_id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/user_delete.png\" alt=\"kick user\"></a></td>";
+			echo "<td align=\"center\"><a href=\"/mail/compose?stdin=". $member["user_id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_edit.png\" alt=\"send message\"></a></td>";
+			echo "<td align=\"center\"><a href=\"/mail/chat?stdin=". $member["user_id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_link.png\" alt=\"mail log\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<a href="/war/teamadd" class="hack_button">Add Member</a><br><br>
+
+<?php
+	$campaign = $this->campaignStatus($this->teaminfo["id"]);
+
+	if ($campaign == "lackingplayers") {
+?>
+
+You are lacking the required amount of active players to join a campaign. Please recruit more by hitting add member or consider joining another team. Thanks!
+
+<?php
+	}
+	if ($campaign == "didntqueue") {
+?>
+
+You are currently eligible to play. Click a Campaign queue when ready!<br><br>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th>Campaign</th>
+		<th>Available</th>
+		<th>Play</th>
+		<th>Admin</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$camps = $this->campaignCount("getall","none");
+		foreach ($camps as $camp) {
+			$xcamp = $this->campaignLookup($camp["id"]);
+			echo "<tr>";
+			echo "<td>". $xcamp["name"] ."</td>";
+			echo "<td>". $this->campaignCount("open",$camp["id"]) ." / ". $this->campaignCount("all",$camp["id"]) ."</td>";
+			echo "<td align=\"center\"><a href=\"/war/teamqueue/?stdin=". $camp["id"] ."\" class=\"hack_button\">Queue to Play</a></td>";
+			echo "<td>". $xcamp["admin"] ."</td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<?php
+	}
+	if ($campaign == "pending") {
+?>
+
+A system admin will be in contact with you through out the entire process. Please keep checking your messages on this on site  or you might forfeit your position in this campaign.<br><br>
+While you wait during this process, please consider checking out the <a href="/war/board">War Board</a> and study your targets.<br>
+
+<?php
+	}
+	if ($campaign == "active") {
+?>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Team Campaign Details - Controlled Nodes</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$boxes = $this->campaignTeams("all",$this->teaminfo["id"]);
+		foreach ($boxes as $box) {
+			$xcampaign = $this->campaignLookup($box["campaign"]);
+			$xdetails  = $this->campaignDetail($box["id"]);
+			echo "<tr>";
+			echo "<td>";
+			echo "Campaign: ". $xcampaign["name"] ."<br>";
+			echo "Node: ". $box["id"] ."<br>";
+			echo "Status: ". $box["status"] ."<br><br>";
+			if ($xdetails["box_root_plain"] == "NULL" || !$xdetails["box_root_plain"]) {
+				echo "Root Password: <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=5". "\" class=\"hack_button\">do it now</a><br>";
+			} else {
+				echo "Root Password: ". $box["box_root_plain"] ."<br>";
+			}
+			if ($xdetails["box_root_hash"] == "NULL" || !$xdetails["box_root_hash"]) {
+				echo "Root Hash: <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=6". "\" class=\"hack_button\">do it now</a><br>";
+			} else {
+				echo "Root Hash: ". substr($box["box_root_hash"],0,15) ."****<br>";
+			}
+			if ($xdetails["sql_root_plain"] == "NULL" || !$xdetails["sql_root_plain"]) {
+				echo "SQL Password: <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=7". "\" class=\"hack_button\">do it now</a><br>";
+			} else {
+				echo "SQL Password: ". $box["sql_root_plain"] ."<br>";
+			}
+			if ($xdetails["sql_root_hash"] == "NULL" || !$xdetails["sql_root_hash"]) {
+				echo "SQL Hash: <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=8". "\" class=\"hack_button\">do it now</a><br>";
+			} else {
+				echo "SQL Hash: ". substr($box["sql_root_hash"], 0, 10) ."****<br>";
+			}
+			echo "</td>";
+			echo "<td>";
+			if ($xdetails["box_root_plain"] != "NULL" && $xdetails["box_root_plain"] != "" && $xdetails["box_root_plain"] != "Pending") {	
+				echo "ssh ". $box["remote"] ." -p ". $box["box_ssh_rport"] ." -l war". $box["id"] ." [or] root<br><br>";
+			}
+			// DETERMINE FIRST TIME SETUP ALWAYS SHOW BUTTON
+			if ($xdetails["box_sys"] == "NULL" || $xdetails["box_sys"] == "" || !$xdetails["box_sys"]) {
+				echo "You need to choose a distro <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=1". "\" class=\"hack_button\">do it now</a><br><br>";
+			} else {
+				echo $box["box_sys"] . "<br>";
+			}
+			// DETERMINE SSH SETUP
+			echo $box["box_ssh"] . "<br>";
+			// DETERMINE FTP SETUP
+			if ($xdetails["box_ftp"] == "NULL" || !$xdetails["box_ftp"]) {
+				echo "You must provide FTP version <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=2". "\" class=\"hack_button\">do it now</a><br><br>";
+			} else {
+				echo $box["box_ftp"] . "<br>";
+			}
+			// DETERMINE HTTP SETUP
+			if ($xdetails["box_http"] == "NULL" || !$xdetails["box_http"]) {
+				echo "You must provide HTTP version <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=3". "\" class=\"hack_button\">do it now</a><br><br>";
+			} else {
+				echo $box["box_http"] . "<br>";
+			}
+			// DETERMINE SQL SETUP
+			if ($xdetails["box_sql"] == "NULL" || !$xdetails["box_sql"]) {
+				echo "You must provide SQL version <a href=\"/war/teamprogress?node=". $box["id"] ."&opt=4". "\" class=\"hack_button\">do it now</a><br><br>";
+			} else {
+				echo $box["box_sql"] . "<br>";
+			}
+			echo "</td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<?php
+	}
+}
+?>

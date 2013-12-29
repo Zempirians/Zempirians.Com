@@ -1,0 +1,101 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$node = $this->boxLookup("box",$this->node);
+
+?>
+
+Make all changes to your node from here.
+
+<form action="/war/admineditnodesubmit" method="POST">
+<input type="hidden" name="node" value="<?php echo $this->node; ?>">
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th>Name</td>
+		<th>Value</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Local Address:</td>
+		<td><input type="text" name="c_local" class="s_admin_form_input0" value="<?php echo $node["local"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>Remote Address:</td>
+		<td><input type="text" name="c_remote" class="s_admin_form_input0" value="<?php echo $node["remote"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>Plain Root Password (sys):</td>
+		<td><input type="text" name="c_prpb" class="s_admin_form_input0" value="<?php echo $node["box_root_plain"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>Hash Root Password (sys):</td>
+		<td><input type="text" name="c_hrpb" class="s_admin_form_input0" value="<?php echo $node["box_root_hash"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>Plain Root Password (sql):</td>
+		<td><input type="text" name="c_prps" class="s_admin_form_input0" value="<?php echo $node["sql_root_plain"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>Hash Root Password (sql):</td>
+		<td><input type="text" name="c_hrps" class="s_admin_form_input0" value="<?php echo $node["sql_root_hash"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>System Version:</td>
+		<td><input type="text" name="c_sysver" class="s_admin_form_input0" value="<?php echo $node["box_sys"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SSH Version:</td>
+		<td><input type="text" name="c_sshver" class="s_admin_form_input0" value="<?php echo $node["box_ssh"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SSH Local Port:</td>
+		<td><input type="text" name="c_sshlport" class="s_admin_form_input0" value="<?php echo $node["box_ssh_lport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SSH Remote Port:</td>
+		<td><input type="text" name="c_sshrport" class="s_admin_form_input0" value="<?php echo $node["box_ssh_rport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SQL Version:</td>
+		<td><input type="text" name="c_sqlver" class="s_admin_form_input0" value="<?php echo $node["box_sql"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SQL Local Port:</td>
+		<td><input type="text" name="c_sqllport" class="s_admin_form_input0" value="<?php echo $node["box_sql_lport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>SQL Remote Port:</td>
+		<td><input type="text" name="c_sqlrport" class="s_admin_form_input0" value="<?php echo $node["box_sql_rport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>HTTP Version:</td>
+		<td><input type="text" name="c_httpver" class="s_admin_form_input0" value="<?php echo $node["box_http"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>HTTP Local Port:</td>
+		<td><input type="text" name="c_httplport" class="s_admin_form_input0" value="<?php echo $node["box_http_lport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>HTTP Remote Port:</td>
+		<td><input type="text" name="c_httprport" class="s_admin_form_input0" value="<?php echo $node["box_http_rport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>FTP Version:</td>
+		<td><input type="text" name="c_ftpver" class="s_admin_form_input0" value="<?php echo $node["box_ftp"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>FTP Local Port:</td>
+		<td><input type="text" name="c_ftplport" class="s_admin_form_input0" value="<?php echo $node["box_ftp_lport"]; ?>" /></td>
+	</tr>
+	<tr>
+		<td>FTP Remote Port:</td>
+		<td><input type="text" name="c_ftprport" class="s_admin_form_input0" value="<?php echo $node["box_ftp_rport"]; ?>" /></td>
+	</tr>
+
+</tbody>
+</table>
+
+<input type="submit" name="submit" value="Update Node" class="s_admin_form_submit0">
+
+</form>

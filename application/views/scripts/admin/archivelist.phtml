@@ -11,6 +11,7 @@
 		<th>Description</th>
 		<th>Created</th>
 		<th>Archive</th>
+		<th>Options</th>
 	</tr>
 </thead>
 <tbody>
@@ -24,7 +25,8 @@
 		<td><?php echo $result["title"]; ?></td>
 		<td><?php echo $result["desc"]; ?></td>
 		<td><?php echo $result["created"]; ?></td>
-		<td><a href="/archives/<?php echo $result["gid"] ."_". $result["id"] .".". $result["type"]; ?>">View File</a></td>
+		<td><a href="/archives/<?php echo $result["gid"] ."_". $result["id"] .".". $result["type"]; ?>" class="hack_button">View</a></td>
+		<td><a href="/mail/compose/?stdin=<?php echo $result["gid"]; ?>" class="hack_button">Message</a></td>
 	</tr>
 <?php
 		}

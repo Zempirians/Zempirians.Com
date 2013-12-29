@@ -1,0 +1,42 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+	$box = $this->boxLookup("box",$this->node);
+	$campaign = $this->campaignLookup($box["campaign"]);
+	$team = $this->warTeams($box["team"]);
+?>
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Type</th>
+		<th>Details</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>Node ID</td><td><?php echo $box["id"]; ?></td></tr>
+	<tr><td>Campaign</td><td><?php echo $campaign["name"]; ?></td></tr>
+	<tr><td>Team</td><td><?php echo $team["name"]; ?></td></tr>
+	<tr><td>Internal IP</td><td><?php echo $box["local"]; ?></td></tr>
+	<tr><td>Public IP</td><td><?php echo $box["remote"]; ?></td></tr>
+	<tr><td>System</td><td><?php echo $box["box_sys"]; ?></td></tr>
+</tbody>
+</table>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Daemon</th>
+		<th>Version</th>
+		<th>Local Port</th>
+		<th>Remote Port</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>FTP</td><td><?php echo $box["box_ftp"]; ?></td><td><?php echo $box["box_ftp_lport"]; ?></td><td><?php echo $box["box_ftp_rport"]; ?></td></tr>
+	<tr><td>SSH</td><td><?php echo $box["box_ssh"]; ?></td><td><?php echo $box["box_ssh_lport"]; ?></td><td><?php echo $box["box_ssh_rport"]; ?></td></tr>
+	<tr><td>HTTP</td><td><?php echo $box["box_http"]; ?></td><td><?php echo $box["box_http_lport"]; ?></td><td><?php echo $box["box_http_rport"]; ?></td></tr>
+	<tr><td>SQL</td><td><?php echo $box["box_sql"]; ?></td><td><?php echo $box["box_sql_lport"]; ?></td><td><?php echo $box["box_sql_rport"]; ?></td></tr>
+</tbody>
+</table>
+
+<a href="/war/hack?node=<?php echo $box["id"]; ?>" class="hack_button">Report Hack</a>

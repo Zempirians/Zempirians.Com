@@ -1,0 +1,59 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+Current Teams: <?php echo $this->warTeams("count"); ?><br>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Name</th>
+		<th>Members</th>
+		<th>Points</th>
+		<th>Leader</th>
+		<th colspan=2>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$teams = $this->warTeams("all");
+		foreach ($teams as $team) {
+			echo "<tr>";
+			echo "<td>". $team["name"] ."</td>";
+			echo "<td>". $this->memberCount($team["id"]) ."</td>";
+			echo "<td>". $team["points"] ."</td>";
+			echo "<td>". $this->memberLookup($team["admin_id"]) ."</td>";
+			echo "<td align=\"center\"><a href=\"/mail/compose?stdin=". $team["admin_id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_edit.png\" border=\"0\"></a></td>";
+			echo "<td align=\"center\"><a href=\"/mail/chat?stdin=". $team["admin_id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_link.png\" border=\"0\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+Current Members: <?php echo $this->warMembers("count"); ?><br>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th>Name</th>
+		<th>Since</th>
+		<th>Points</th>
+		<th colspan=2>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$members = $this->warMembers("all");
+		foreach ($members as $member) {
+			echo "<tr>";
+			echo "<td>". $member["handle"] ."</td>";
+			echo "<td>". $member["since"] ."</td>";
+			echo "<td>". $member["points"] ."</td>";
+			echo "<td align=\"center\"><a href=\"/mail/compose?stdin=". $member["id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_edit.png\" border=\"0\"></a></td>";
+			echo "<td align=\"center\"><a href=\"/mail/chat?stdin=". $member["id"] ."\" class=\"inbox_link\"><img src=\"". $wmf_xs->dirtheme ."/ico/email_link.png\" border=\"0\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>

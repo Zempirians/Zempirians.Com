@@ -18,7 +18,8 @@ class Zend_View_Helper_WarTeams
 		if ($str == "count") {
 			$queryF = $db->select()
 				->from('war_teams', array("xcount"=>"COUNT(*)"))
-				->where('id > ?', "0");
+				->where('id > ?', "0")
+				->where('en = ?', "1");
 			$resultF = $db->fetchRow($queryF);
 			$queryF->reset();
 			return $resultF["xcount"];
@@ -28,8 +29,19 @@ class Zend_View_Helper_WarTeams
 			$queryF = $db->select()
 				->from('war_teams')
 				->where('id > ?', "0")
+				->where('en = ?', "1")
 				->order('points DESC');
 			$resultF = $db->fetchAll($queryF);
+			$queryF->reset();
+			return $resultF;
+		}
+
+		if (is_numeric($str)) {
+			$queryF = $db->select()
+				->from('war_teams')
+				->where('id = ?', $str)
+				->where('en = ?', "1");
+			$resultF = $db->fetchRow($queryF);
 			$queryF->reset();
 			return $resultF;
 		}

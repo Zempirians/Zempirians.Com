@@ -1,0 +1,25 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+?>
+
+<div class="s_admin_table_1">
+<form action="/war/adminaddnodesubmit" method="POST">
+	<div class="s_admin_table_td1a">Campaign:</div>
+	<div class="s_admin_table_td1b">
+		<select name="camp_id" class="s_admin_form_input0" />
+<?php
+		$campaigns = $this->adminCampaign("showcamps");
+		foreach ($campaigns as $camp) {
+			echo "<option value=\"". $camp["id"] ."\">". $camp["id"] . " - " . $camp["name"] ."</option>";
+		}
+?>
+		</select>
+		</div>
+	<div class="s_admin_table_td1c">Local Address:</div>
+	<div class="s_admin_table_td1d"><input type="text" name="c_local" class="s_admin_form_input0" /></div>
+	<div class="s_admin_table_td1e">Remote Address:</div>
+	<div class="s_admin_table_td1f"><input type="text" name="c_remote" class="s_admin_form_input0" /></div>
+	<div class="s_admin_table_tr1a"><input type="submit" name="submit" value="Create Node" class="s_admin_form_submit0"></div>
+</form>
+</div>

@@ -66,7 +66,9 @@ class Zend_View_Helper_AccToolbar
 
 				// Show Student Panel
 				if ($userInfo->rights >= 1) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/student/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Student&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/war/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/tux.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Wargames&nbsp;</a></li>";
+					$html .= "	        <div class=\"tbar_sep\"></div>\n";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/student/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/award_star_gold_1.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Academy&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 
@@ -78,7 +80,7 @@ class Zend_View_Helper_AccToolbar
 
 				// Show Admin Panel
 				if ($userInfo->rights >= 3) {
-					$html .= "		<li class=\"tbar_menu\"><a href=\"/admin/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/layout.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Admin&nbsp;</a></li>";
+					$html .= "		<li class=\"tbar_menu\"><a href=\"/admin/index\" class=\"tbar_menu_link\">&nbsp;<img src=\"/sthemes/0/ico/eye.png\" class=\"tbar_icon\" border=\"0\">&nbsp;Mastah!&nbsp;</a></li>";
 					$html .= "	        <div class=\"tbar_sep\"></div>\n";
 				}
 

@@ -1,0 +1,27 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+?>
+
+<ul id="adminMenu">
+	<li><a href="javascript:void(0);">Sploit.Me Wargames</a>
+		<ul>
+			<li><a href="/war/home">Home</a></li>
+			<li><a href="/war/team">Team</a></li>
+			<li><a href="/war/battle">War</a></li>
+			<li><a href="/war/score">Score</a></li>
+			<li><a href="/war/journal">Journal</a></li>
+		</ul>
+	</li>
+<?php
+	if ($userInfo->campaign >= "1") {
+?>
+	<li><a href="javascript:void(0);">Campaign Admin</a>
+		<ul>
+			<li><a href="/war/admin">Home</a></li>
+		</ul>
+	</li>
+<?php
+	}
+?>
+</ul>

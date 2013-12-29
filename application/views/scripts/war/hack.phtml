@@ -1,0 +1,20 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+?>
+
+<div class="s_war_table_1">
+<form action="/war/hacksubmit" method="POST">
+	<input type="hidden" value="<?php echo $this->node; ?>" name="node">
+	<div class="s_war_table_tr1x">Choices</div>
+	<div class="s_war_table_tr1a"><input type="radio" name="report" value="50">Full compromise</div>
+	<div class="s_war_table_tr1b"><input type="radio" name="report" value="40">Plain text root password</div>
+	<div class="s_war_table_tr1c"><input type="radio" name="report" value="30">Plain text sql password</div>
+	<div class="s_war_table_tr1d"><input type="radio" name="report" value="20">Encrypted root password</div>
+	<div class="s_war_table_tr1e"><input type="radio" name="report" value="10">Encrypted sql password</div>
+	<div class="s_war_table_tr1f">Password</div>
+	<div class="s_war_table_tr1g"><input type="text" name="stdin" class="s_war_form_input1" /></div>
+	<div class="s_war_table_tr1y">* Always provide the password, even if compromised.</div>
+	<div class="s_war_table_tr1h"><input type="submit" name="submit" value="Report Hack" class="s_war_form_submit1"></div>
+</form>
+</div>

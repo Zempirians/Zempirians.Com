@@ -1,0 +1,140 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+Nodes that have been sabotaged! Use this to your benefit...<br>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>Node</th>
+		<th>Message</th>
+		<th>Since</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$sabs = $this->sabotageLookup($this->campid);
+		foreach ($sabs as $sabotage) {
+			echo "<tr>";
+			echo "<td width=\"100\">Node ". $sabotage["id"] ."</td>";
+			echo "<td>". $sabotage["text"] ."</td>";
+			echo "<td>". $sabotage["created"] ."</td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+Nodes that are currently battling...<br>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th>War Node</th>
+		<th>Defenders</th>
+		<th>Status</th>
+		<th>Since</th>
+		<th>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$boxes = $this->boxLookup("box_online",$this->campid);
+		foreach ($boxes as $box) {
+			$campaign = $this->campaignLookup($box["campaign"]);
+			echo "<tr>";
+			echo "<td>".  $campaign["name"] ." - node ". $box["id"] ."</td>";
+			if ($box["team"] == 0) {
+				echo "<td>None</td>";
+			} else {
+				$a = $this->warTeams($box["team"]);
+				echo "<td>". $a["name"] ."</td>";
+			}
+			echo "<td align=\"center\">". $box["status"] ."</td>";
+			echo "<td align=\"center\">". $box["created"] ."</td>";
+			echo "<td align=\"center\"><a href=\"/war/details?node=". $box["id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/monitor_go.png\" alt=\"view details\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+Nodes that will soon join the battle...<br>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th>War Node</th>
+		<th>Defenders</th>
+		<th>Status</th>
+		<th>Progress</th>
+		<th>Since</th>
+		<th>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$boxes = $this->boxLookup("box_pending",$this->campid);
+		foreach ($boxes as $box) {
+			$campaign = $this->campaignLookup($box["campaign"]);
+			echo "<tr>";
+			echo "<td>". $campaign["name"] ." - node ". $box["id"] ."</td>";
+			if ($box["team"] == 0) {
+				echo "<td>None</td>";
+			} else {
+				$a = $this->warTeams($box["team"]);
+				echo "<td>". $a["name"] ."</td>";
+			}
+			echo "<td align=\"center\">". $box["status"] ."</td>";
+			echo "<td align=\"center\">". $this->warProgress($box["id"]) ."/18</td>";
+			echo "<td align=\"center\">". $box["created"] ."</td>";
+			echo "<td align=\"center\"><a href=\"/war/details?node=". $box["id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/monitor_go.png\" alt=\"view details\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+Nodes that are currently breached...<br>
+
+<table id="gridd" class="tablesorter">
+<thead>
+	<tr>
+		<th>Campaign</th>
+		<th>Node</th>
+		<th>Attackers</th>
+		<th>Defenders</th>
+		<th>Status</th>
+		<th>Breached</th>
+		<th>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$boxes = $this->boxLookup("box_breach",$this->campid);
+		foreach ($boxes as $box) {
+			$campaign = $this->campaignLookup($box["campaign"]);
+			echo "<tr>";
+			echo "<td>". $campaign["name"] ."</td>";
+			echo "<td>". $box["id"] ."</td>";
+			if ($box["attack"] == 0) {
+				echo "<td>None</td>";
+			} else {
+				$b = $this->warTeams($box["attack"]);
+				echo "<td>". $b["name"] ."</td>";
+			}
+			if ($box["team"] == 0) {
+				echo "<td>None</td>";
+			} else {
+				$a = $this->warTeams($box["team"]);
+				echo "<td>". $a["name"] ."</td>";
+			}
+			echo "<td>". $box["status"] ."</td>";
+			echo "<td>". $box["created"] ."</td>";
+			echo "<td align=\"center\"><a href=\"/war/details?node=". $box["id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/monitor_go.png\" alt=\"view details\"></a></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>

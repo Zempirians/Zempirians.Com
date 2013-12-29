@@ -1,0 +1,15 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+
+?>
+
+<div class="s_team_table_4">
+<form action="/war/teamprogresssubmit" method="POST">
+	<input type="hidden" value="<?php echo $this->node; ?>" name="node">
+	<input type="hidden" value="<?php echo $this->opt; ?>" name="opt">
+	<div class="s_team_table_tr4a">Input: distro, version or password</div>
+	<div class="s_team_table_tr4b"><input type="text" name="stdin" class="s_team_form_input4" /></div>
+	<div class="s_team_table_tr4c">* Always provide using the cli -v/-V options. (Except when picking a distro)</div>
+	<div class="s_team_table_tr4d"><input type="submit" name="submit" value="Submit Version" class="s_team_form_submit4"></div>
+</form>
+</div>

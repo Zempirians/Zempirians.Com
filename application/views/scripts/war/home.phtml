@@ -1,0 +1,113 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<table id="gridd" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Notes from the Admins</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td width=100>2013-10-07</td>
+		<td>A new challenge has been added to the wargames. The campaign leader will randomly select an active node for sabotage. Once a box is sabotaged you will be notified about it in the war board. Use this to your advantage to hack the node!</td>
+	</tr>
+	<tr>
+		<td width=100>2013-02-07</td>
+		<td>Team size restriction has been lifted. Once you create or join a team you can immediately begin playing (if you have queued properly before hand).</td>
+	</tr>
+	<tr>
+		<td width=100>2013-01-07</td>
+		<td>Team restriction may be lowered from 5 active players soon. I am still debating this idea, I will keep everyone informed.</td>
+	</tr>
+	<tr>
+		<td>2013-30-06</td>
+		<td>Teams are required to have a minimum of 5 active players in order to participate. This means members need to get on a team or start and populate a new one.</td>
+	</tr>
+</tbody>
+</table>
+
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Frequently Asked Questions</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td width=150>I joined a campaign, now what?</td>
+		<td>You will be contacted by the campaign leader to discuss which distro you want.</td>
+	</tr>
+	<tr>
+		<td>I picked my distro, now what?</td>
+		<td>After your server is installed, the campaign leader will update your team board and send you a message with credentials.</td>
+	</tr>
+	<tr>
+		<td>Do we get a grace period?</td>
+		<td>Yes, you will need to confirm your box is ready to enter the battlefield by sending a message to your campaign admin. For example: Campaign 1 (Beowulf Cluster) belongs to UberLame.</td>
+	</tr>
+	<tr>
+		<td>What happens in grace period?</td>
+		<td>Change your user password since its same as root to start. Setup an http daemon and publish a website. Setup an ftp and add an account for the http. Setup an SQL since the site you post should use it as a backend. Report that you have done this with your campaign admin. Afterwards you may battle!!!</td>
+	</tr>
+	<tr>
+		<td>I hacked something, now what?</td>
+		<td>Use the war board and click on the node you hacked, inside that window there is an option to 'Report Hack'. Use this to report your hack to the campaign leader. 4 out 5 choices for reporting hacks is automated.</td>
+	</tr>
+	<tr>
+		<td>I reported a full compromise but it says online still, WHY?</td>
+		<td>The box requires the attention of the campaign admin. The admin will verify that you shut down the box and that the root password you provided is now the new one for that node. Once confirmed the admin will mark it hacked and will add it to your team board.</td>
+	</tr>
+</tbody>
+</table>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th>Rules, these may change randomly.</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>Once your team loses all access to controlled boxes, you will be able to requeue in to any campaign you want.</td></tr>
+	<tr><td>Players can earn extra points for themselves by submitting either plaintext or hashtext passwords of the options for that node.</td></tr>
+	<tr><td>Any time you compromise a box please change the root password and shut the box down before reporting it, otherwise you will not receive points or the box.</td></tr>
+	<tr><td>If you require more help, please message the Admin of the Campaign you are playing.</td></tr>
+</tbody>
+</table>
+
+
+<table id="gridc" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Current Point System</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td width=100>500 points</td>
+		<td>Full campaign comprise. (+250 per member in team).</td>
+	</tr>
+	<tr>
+		<td>50 points</td>
+		<td>Full node compromise + shutdown. (+25 per member in team)</td>
+	</tr>
+	<tr>
+		<td>40 points</td>
+		<td>Submit plain text root password for the box</td>
+	</tr>
+	<tr>
+		<td>30 points</td>
+		<td>Submit plain text root password for the sql</td>
+	</tr>
+	<tr>
+		<td>20 points</td>
+		<td>Submit encrypted root password for the box</td>
+	</tr>
+	<tr>
+		<td>10 points</td>
+		<td>Submit encrypted root password for the sql</td>
+	</tr>
+</tbody>
+</table>
