@@ -6,10 +6,11 @@
 <table id="grida" class="tablesorter">
 <thead>
 	<tr>
-		<th colspan=2>Handle</th>
+		<th>Handle</th>
 		<th>Position</th>
 		<th>Joined</th>
 		<th>Points</th>
+		<th colspan=2>Options</th>
 	</tr>
 </thead>
 <tbody>
@@ -19,11 +20,12 @@
 			$info = $this->profileInfo($result["id"]);
 ?>
 	<tr>
-		<td><a href="/profile/member/?stdin=<?php echo $result["id"]; ?>">View Profile</a></td>
 		<td><?php echo $info["handle"]; ?></td>
 		<td><?php echo $result["rank"]; ?></td>
 		<td><?php echo $result["since"]; ?></td>
 		<td><?php echo $result["points"]; ?></td>
+		<td><a href="/profile/member/?stdin=<?php echo $result["id"]; ?>" class="hack_button">Profile</a></td>
+		<td><a href="/mail/compose/?stdin=<?php echo $result["id"]; ?>" class="hack_button">Message</a></td>
 	</tr>
 <?php
 		}

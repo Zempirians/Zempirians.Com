@@ -1,0 +1,25 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Battles</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+	$logs = $this->warlog;
+	foreach ($logs as $log) {
+		echo "	<tr>\n";
+		echo "		<td width=150>". $log["defeated"] ."</td>\n";
+		echo "		<td>". $this->journalHook($log["id"]) ."</td>\n";
+		echo "	</tr>\n";
+
+	}
+?>
+</tbody>
+</table>
+
+

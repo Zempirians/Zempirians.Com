@@ -7,10 +7,6 @@
 		<div class="z_about_table_tdgap"></div>
 		<div class="z_about_table_td0a">Hacker. War. Games. Score.</div>
 		<div class="z_about_table_tdgap"></div>
-		<div class="z_about_table_td0b">
-		There are currently <?php echo $this->warTeams("count"); ?> team(s) and <?php echo $this->warMembers("count"); ?> member(s) participating in the Zempirians' Wargames.<br>You may participate at <a href="http://sploit.me.uk">http://sploit.me.uk</a>.
-		</div>
-		<div class="z_about_table_tdgap"></div>
 </div>
 
 <div class="z_bugnet_table_0">
@@ -29,7 +25,7 @@
 		$members = $this->warMembers("all");
 		foreach ($members as $member) {
 			echo "<tr>";
-			echo "<td>". $member["handle"] ."</td>";
+			echo "<td><a href=\"/profile/member/?stdin=". $member["id"] ."\">". $member["handle"] ."</a></td>";
 			echo "<td>". $member["since"] ."</td>";
 			echo "<td>". $member["points"] ."</td>";
 			echo "</tr>\n";

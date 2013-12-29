@@ -6,7 +6,7 @@
 <table id="grida" class="tablesorter">
 <thead>
 	<tr>
-		<th colspan="3">Options</th>
+		<th colspan="4">Options</th>
 		<th>Handle</th>
 		<th>Position</th>
 		<th>Details</th>
@@ -20,9 +20,10 @@
 			$info = $this->profileInfo($result["gid"]);
 ?>
 	<tr>
-		<td><a href="/admin/appaccept?stdin=<?php echo $result["gid"]; ?>">Accept</a></td>
-		<td><a href="/admin/appdeny?stdin=<?php echo $result["gid"]; ?>">Deny</a></td>
-		<td><a href="/profile/member/?stdin=<?php echo $result["gid"]; ?>" target="_new">View</a></td>
+		<td><a href="/admin/appaccept?stdin=<?php echo $result["gid"]; ?>" class="hack_button">Accept</a></td>
+		<td><a href="/admin/appdeny?stdin=<?php echo $result["gid"]; ?>" class="hack_button">Deny</a></td>
+		<td><a href="/profile/member/?stdin=<?php echo $result["gid"]; ?>" class="hack_button">View</a></td>
+		<td><a href="/mail/compose/?stdin=<?php echo $result["gid"]; ?>" class="hack_button">Message</a></td>
 		<td><?php echo $info["handle"]; ?></td>
 		<td><?php echo $result["position"]; ?></td>
 		<td><?php echo $result["details"]; ?></td>

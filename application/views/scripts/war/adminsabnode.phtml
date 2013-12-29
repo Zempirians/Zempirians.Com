@@ -1,0 +1,37 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$node = $this->boxLookup("box",$this->node);
+
+?>
+
+Make all changes to your node from here.
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th colspan=2>Selection</td>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Sabotage the Distro</td>
+		<td width="150" align="center"><a href="/war/adminsabmsg?stdin=<?php echo $this->node; ?>&opt=1" class="hack_button">Submit</a></td>
+	</tr>
+	<tr>
+		<td>Sabotage the Daemon: SSH</td>
+		<td width="150" align="center"><a href="/war/adminsabmsg?stdin=<?php echo $this->node; ?>&opt=2" class="hack_button">Submit</a></td>
+	</tr>
+	<tr>
+		<td>Sabotage the Daemon: FTP</td>
+		<td width="150" align="center"><a href="/war/adminsabmsg?stdin=<?php echo $this->node; ?>&opt=3" class="hack_button">Submit</a></td>
+	</tr>
+	<tr>
+		<td>Sabotage the Daemon: SQL</td>
+		<td width="150" align="center"><a href="/war/adminsabmsg?stdin=<?php echo $this->node; ?>&opt=4" class="hack_button">Submit</a></td>
+	</tr>
+	<tr>
+		<td>Sabotage the Daemon: HTTP</td>
+		<td width="150" align="center"><a href="/war/adminsabmsg?stdin=<?php echo $this->node; ?>&opt=5" class="hack_button">Submit</a></td>
+	</tr>
+</tbody>
+</table>

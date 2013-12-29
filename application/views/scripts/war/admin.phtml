@@ -1,0 +1,129 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+
+	if ($userInfo->campaign > "1") {
+?>
+
+Current Campaigns Available: <?php echo $this->campaignCount("allcamp","none"); ?> on your network.<br>
+
+<table id="gridb" class="tablesorter">
+<thead>
+	<tr>
+		<th width="50">Id</td>
+		<th width="150">Campaign</th>
+		<th>Nodes</th>
+		<th>Admin</th>
+		<th>Status</th>
+		<th>Since</th>
+		<th colspan=4>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$camps = $this->campaignCount("getcamp","all");
+		foreach ($camps as $camp) {
+			echo "<tr>";
+			echo "<td align=\"center\">". $camp["id"] ."</td>";
+			echo "<td>". $camp["name"] ."</td>";
+			echo "<td>". $this->campaignCount("all",$camp["id"]) ."</td>";
+			echo "<td>". $camp["admin"] ."</td>";
+			echo "<td>". $camp["status"] ."</td>";
+			echo "<td>". $camp["created"] ."</td>";
+			echo "<td align=\"center\"><img src=\"". $wmf_xs->dirtheme ."/ico/world_delete.png\" alt=\"delete node\"></td>";
+			echo "<td align=\"center\"><img src=\"". $wmf_xs->dirtheme ."/ico/world_edit.png\" alt=\"edit node\"></td>";
+			echo "<td align=\"center\"><a href=\"/war/admingocamp?stdin=". $camp["id"] ."\"><img src=\"". $wmf_xs->dirtheme ."/ico/world_go.png\" alt=\"set to open campaign\"></a></td>";
+			echo "<td align=\"center\"><img src=\"". $wmf_xs->dirtheme ."/ico/world_link.png\" alt=\"mark as game over\"></td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<br>
+<a href="/war/adminaddcamp" class="hack_button">Add Campaign</a>
+<br><br>
+
+<?php
+	}
+?>
+
+Current Nodes Available: <?php echo $this->campaignBoxes("count"); ?> on your campaigns<br>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th width="50">Id</td>
+		<th width="150">Campaign</th>
+		<th>Node</th>
+		<th>Defenders</th>
+		<th>Status</th>
+		<th>Since</th>
+		<th>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$boxes = $this->campaignCount("adminnodes","null");
+		foreach ($boxes as $box) {
+			$campaign = $this->campaignLookup($box["campaign"]);
+			echo "<tr>";
+			echo "<td>". $box["id"] ."</td>";
+			echo "<td>". $campaign["name"] ."</td>";
+			echo "<td>". $box["local"] ."</td>";
+			if ($box["team"] == 0) {
+				echo "<td>None</td>";
+			} else {
+				$a = $this->warTeams($box["team"]);
+				echo "<td>". $a["name"] ."</td>";
+			}
+			echo "<td>". $box["status"] ."</td>";
+			echo "<td>". $box["created"] ."</td>";
+			echo "<td align=\"center\">";
+			echo "	<a href=\"#\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/computer_delete.png\" alt=\"delete node\" class=\"hack_icon\"> Dead</a>";
+			echo "	<a href=\"/war/admineditnode?stdin=". $box["id"] ."\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/computer_edit.png\" class=\"hack_icon\" alt=\"edit node\"> Modify</a>";
+			echo "	<a href=\"/war/admingonode?stdin=". $box["id"] ."\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/computer_go.png\" class=\"hack_icon\" alt=\"set to open node\"> Online</a>";
+			echo "	<a href=\"#\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/computer_error.png\" alt=\"mark node as hacked\" class=\"hack_icon\"> Hacked</a>";
+			echo "	<a href=\"/war/adminsabnode?stdin=". $box["id"] ."\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/bug.png\" class=\"hack_icon\" alt=\"mark node as bugged\"> Sabotage</a>";
+			echo "</td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<br>
+<a href="/war/adminaddnode" class="hack_button">Add Node</a>
+<br><br>
+
+Current Teams Available: <?php echo $this->xteamcnt; ?> on your nodes<br>
+
+<table id="grida" class="tablesorter">
+<thead>
+	<tr>
+		<th width="50">Id</td>
+		<th width="150">Campaign</th>
+		<th>Team</th>
+		<th>Options</th>
+	</tr>
+</thead>
+<tbody>
+<?php
+		$teams = $this->xteamstr;
+		foreach ($teams as $team) {
+			$campaign = $this->campaignLookup($team["campaign"]);
+			echo "<tr>";
+			echo "<td>". $team["id"] ."</td>";
+			echo "<td>". $campaign["name"] ."</td>";
+			echo "<td>". $team["name"] ."</td>";
+			echo "<td align=\"center\">";
+			echo "	<a href=\"/war/adminkickteam?stdin=". $team["id"] ."\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/user_delete.png\" alt=\"kick team\" class=\"hack_icon\"> Kick</a>";
+			echo "	<a href=\"/war/admingoteam?stdin=". $team["id"] ."\" class=\"hack_button\"><img src=\"". $wmf_xs->dirtheme ."/ico/user_go.png\" alt=\"unqueue team\" class=\"hack_icon\"> Free</a>";
+			echo "</td>";
+			echo "</tr>\n";
+		}
+?>
+</tbody>
+</table>
+
+<br><br>
