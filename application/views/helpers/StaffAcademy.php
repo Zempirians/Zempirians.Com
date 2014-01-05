@@ -31,7 +31,8 @@ class Zend_View_Helper_StaffAcademy
 
 		$queryF = $db->select()
 			->from($myvalue, array("hax"=>"COUNT(*)"))
-			->where('en = ?', '1');
+			->where('en = ?', '1')
+			->where('admin_vote = ?', '1');
 		$resultF = $db->fetchRow($queryF);
 		$queryF->reset();
 

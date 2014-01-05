@@ -122,6 +122,262 @@ class Zend_Controller_Action_Helper_Admin extends Zend_Controller_Action_Helper_
 		return $resultF;
 	}
 
+	function curriculum($a,$name)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		switch ($name) {
+			case "view":
+				$queryF = $db->select()
+					->from('school_curriculum')
+					->where('en >= ?', '0');
+				$resultF = $db->fetchAll($queryF);
+				$queryF->reset();
+				$x = $resultF;
+				break;
+			case 0:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '0',
+					'en'           => '0'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_curriculum', $set, $where);
+				$x = "YAY";
+				break;
+			case 1:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '1',
+					'en'           => '1'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_curriculum', $set, $where);
+				$x = "YAY";
+				break;
+			default:
+				$x = "UGH";
+				break;
+		}
+
+		return $x;
+	}
+
+	function course($a,$name)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		switch ($name) {
+			case "view":
+				$queryF = $db->select()
+					->from('school_course')
+					->where('en >= ?', '0');
+				$resultF = $db->fetchAll($queryF);
+				$queryF->reset();
+				$x = $resultF;
+				break;
+			case 0:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '0',
+					'en'           => '0'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_course', $set, $where);
+				$x = "YAY";
+				break;
+			case 1:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '1',
+					'en'           => '1'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_course', $set, $where);
+				$x = "YAY";
+				break;
+			default:
+				$x = "UGH";
+				break;
+		}
+
+		return $x;
+	}
+
+	function lesson($a,$name)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		$x = "UGH";
+
+		switch ($name) {
+			case "view":
+				$queryF = $db->select()
+					->from('school_lesson')
+					->where('en >= ?', '0');
+				$resultF = $db->fetchAll($queryF);
+				$queryF->reset();
+				$x = $resultF;
+				break;
+			case 0:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '0',
+					'en'           => '0'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_lesson', $set, $where);
+				$x = "YAY";
+				break;
+			case 1:
+				$set = array( 
+					'admin_id'     => $userInfo->id,
+					'admin_create' => date("Y-m-d G:i:s"),
+					'admin_vote'   => '1',
+					'en'           => '1'
+				);
+				$where = $db->quoteInto('id = ?', $a);
+				$db->update('school_lesson', $set, $where);
+				$x = "YAY";
+				break;
+			default:
+				$x = "UGH";
+				break;
+		}
+
+		return $x;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	function emailtool($xid, $xsub, $xmsg)
+	{
+		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+		$xray   = Zend_Registry::getInstance();
+		$config = array(
+			'host'     => $xray->host,
+			'username' => $xray->username,
+			'password' => $xray->password,
+			'dbname'   => $xray->dbname
+		);
+		$db = Zend_Db::factory('Pdo_Mysql', $config);
+
+		switch ($xid) {
+			case 0:
+				$myvalue = "all";
+				break;
+			case 1:
+				$myvalue = "artist";
+				break;
+			case 2:
+				$myvalue = "developer";
+				break;
+			case 3:
+				$myvalue = "director";
+				break;
+			case 4:
+				$myvalue = "founder";
+				break;
+			case 5:
+				$myvalue = "irc_admin";
+				break;
+			case 6:
+				$myvalue = "student";
+				break;
+			case 7:
+				$myvalue = "teacher";
+				break;
+			case 8:
+				$myvalue = "war_admin";
+				break;
+			case 9:
+				$myvalue = "writer";
+				break;
+			default:
+				$myvalue = "UGH";
+				break;
+		}
+
+		if ($myvalue == "all") {
+			$queryE = $db->select()
+				->from('authorize');
+			$resultF = $db->fetchAll($queryE);
+			$queryE->reset();
+
+			foreach ($resultF as $result) {
+				mail($result["email"], $xsub, $xmsg, "From: admin@zempirians.com");
+			}
+			
+			return "YAY";
+		}
+		elseif ($myvalue == "UGH") {
+			return $myvalue;
+		}
+		else {
+			$queryE = $db->select()
+				->from('authorize')
+				->where('rank = ?', $myvalue);
+			$resultF = $db->fetchAll($queryE);
+			$queryE->reset();
+
+			foreach ($resultF as $result) {
+				mail($result["email"], $xsub, $xmsg, "From: admin@zempirians.com");
+			}
+			
+			return "YAY";
+		}
+		
+		
+	}
+
+
+
+
 	function mycampid()
 	{
 		$wmf_ns   = new Zend_Session_Namespace('SPLOIT');

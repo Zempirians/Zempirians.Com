@@ -1,0 +1,46 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<form action="/staff/curriculumsubmit" method="POST">
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Add Curriculum</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td>
+						(ie: Linux Administration - Entry Level I)<br />
+						<input type="text" name="s_name" class="s_account_form_input0" />
+					</td>
+				</tr>
+				<tr>
+					<td>Access Level</td>
+					<td>
+						<select name="s_level" class="s_account_form_input0" />
+							<option value="0">Public</option>
+							<option value="1">Students</option>
+							<option value="2">Staff</option>
+							<option value="6">Classified</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>
+						<textarea style="width:800px;height:200px" name="s_other"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Add" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>
+</center>

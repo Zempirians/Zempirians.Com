@@ -6,7 +6,7 @@
 <table id="grida" class="tablesorter">
 <thead>
 	<tr>
-		<th>Cirriculum</th>
+		<th>Curriculum</th>
 		<th>Created</th>
 		<th>Suggested by</th>
 	</tr>
@@ -15,7 +15,7 @@
 <?php
 		$resultB = $this->newlist;
 		foreach ($resultB as $result) {
-			$info = $this->profileInfo($result["id"]);
+			$info = $this->profileInfo($result["owner_id"]);
 ?>
 	<tr>
 		<td><?php echo $result["name"]; ?></td>
@@ -25,6 +25,9 @@
 <?php
 		}
 ?>
+	<tr>
+		<td colspan=3><a href="/staff/addcurriculum" class="hack_button">Add Curriculum</a></td>
+	</tr>
 </tbody>
 </table>
 

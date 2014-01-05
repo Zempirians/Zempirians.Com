@@ -10,25 +10,19 @@
 			<li><a href="/admin/refuseapps">Refused (<?php echo $this->adminEnroll("2"); ?>)</a></li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Curriculums (0)</a>
+	<li><a href="javascript:void(0);">Academy Curriculums (<?php echo $this->adminAcademy('curriculumtotal'); ?>)</a>
 		<ul>
-			<li>Add</li>
-			<li>Edit</li>
-			<li>View</li>
+			<li><a href="/admin/curriculum">View</a></li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Courses (0)</a>
+	<li><a href="javascript:void(0);">Academy Courses (<?php echo $this->adminAcademy('coursetotal'); ?>)</a>
 		<ul>
-			<li>Add</li>
-			<li>Edit</li>
-			<li>View</li>
+			<li><a href="/admin/course">View</a></li>
 		</ul>
 	</li>
-	<li><a href="javascript:void(0);">Academy Lessons (0)</a>
+	<li><a href="javascript:void(0);">Academy Lessons (<?php echo $this->adminAcademy('lessontotal'); ?>)</a>
 		<ul>
-			<li>Add</li>
-			<li>Edit</li>
-			<li>View</li>
+			<li><a href="/admin/lesson">View</a></li>
 		</ul>
 	</li>
 	<li><a href="javascript:void(0);">Academy Archives (<?php echo $this->adminArchive('total'); ?>)</a>
@@ -48,6 +42,11 @@
 			<li><a href="/admin/profilelist/?stdin=7">Teachers (<?php echo $this->adminProfile('teacher'); ?>)</a></li>
 			<li><a href="/admin/profilelist/?stdin=8">Wargame Admins (<?php echo $this->adminProfile('wargame_admin'); ?>)</a></li>
 			<li><a href="/admin/profilelist/?stdin=9">Writers (<?php echo $this->adminProfile('writer'); ?>)</a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:void(0);">Tools</a>
+		<ul>
+			<li><a href="/admin/emailtool">Email</a></li>
 		</ul>
 	</li>
 </ul>
