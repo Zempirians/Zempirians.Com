@@ -1,0 +1,47 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+?>
+
+<center>
+<form action="/admin/emailtoolsubmit" method="POST">
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Email System</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>To</td>
+					<td>
+						<select name="s_group" class="s_account_form_input0" />
+							<option value="0">All</option>
+							<option value="1">Artists</option>
+							<option value="2">Developers</option>
+							<option value="3">Directors</option>
+							<option value="4">Founders</option>
+							<option value="5">IRC Admins</option>
+							<option value="6">Students</option>
+							<option value="7">Teachers</option>
+							<option value="8">Wargame Admins</option>
+							<option value="9">Writers</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Subject</td>
+					<td><input type="text" name="s_subject" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td><textarea name="s_message" class="s_mail_form_textarea"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Send" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>
+</center>

@@ -6,7 +6,9 @@
 <table id="grida" class="tablesorter">
 <thead>
 	<tr>
-		<th>Cirriculum</th>
+		<th>Curriculum</th>
+		<th>Course</th>
+		<th>Lesson</th>
 		<th>Created</th>
 		<th>Suggested by</th>
 	</tr>
@@ -15,9 +17,13 @@
 <?php
 		$resultB = $this->newlist;
 		foreach ($resultB as $result) {
+			$ci   = $this->academyCurriculum('lookup',$result["pid"]);
+			$co   = $this->academyCourse('lookup',$result["cid"]);
 			$info = $this->profileInfo($result["id"]);
 ?>
 	<tr>
+		<td><?php echo $ci["name"]; ?></td>
+		<td><?php echo $co["name"]; ?></td>
 		<td><?php echo $result["name"]; ?></td>
 		<td><?php echo $result["owner_create"]; ?></td>
 		<td><?php echo $info["handle"]; ?></td>
@@ -25,6 +31,9 @@
 <?php
 		}
 ?>
+	<tr>
+		<td colspan=5><a href="/staff/addlesson" class="hack_button">Add Lesson</a></td>
+	</tr>
 </tbody>
 </table>
 
