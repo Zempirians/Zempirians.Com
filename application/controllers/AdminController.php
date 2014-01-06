@@ -21,9 +21,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -42,9 +39,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Newapps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -64,9 +58,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.AppsAccept";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -100,9 +91,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.AppsDeny";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -136,9 +124,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Newapps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -158,9 +143,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -181,9 +163,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -215,9 +194,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Archives";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -249,9 +225,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Archives";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -269,9 +242,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.Archives";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -309,9 +279,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -331,9 +298,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -362,9 +326,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -393,9 +354,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -415,9 +373,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -446,9 +401,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -477,9 +429,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -499,9 +448,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -530,9 +476,6 @@ class AdminController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Admin.RefuseApps";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');

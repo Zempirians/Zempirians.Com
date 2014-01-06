@@ -22,9 +22,6 @@ class StudentController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Staff.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');

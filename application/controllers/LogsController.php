@@ -14,9 +14,6 @@ class LogsController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "attacks";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Logs.Attacks";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
@@ -29,9 +26,6 @@ class LogsController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "errors";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Logs.Errors";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
@@ -44,9 +38,6 @@ class LogsController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "links";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Logs.Links";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
@@ -59,9 +50,6 @@ class LogsController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "uniques";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Logs.Uniques";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
