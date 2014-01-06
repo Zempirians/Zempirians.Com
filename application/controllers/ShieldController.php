@@ -20,10 +20,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "420";
-		$wmf_ns->jdtitle	= "Access Academy";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
 	}
@@ -36,10 +33,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Create Your Account";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
@@ -53,10 +47,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "350";
-		$wmf_ns->jdheight	= "225";
-		$wmf_ns->jdtitle	= "Thank You";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('core.layout');
@@ -70,10 +61,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Verify Your Account";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$a = $this->getRequest()->getParam('code');
 		$this->view->code = htmlspecialchars($a);
@@ -90,10 +78,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Delete Your Account";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$a = $this->getRequest()->getParam('code');
 		$this->view->code = $this->_helper->shieldsup->paramfilter($a);
@@ -110,10 +95,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Creating";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -146,10 +128,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Authing";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		//$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -220,10 +199,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Email is now verified";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		//if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -260,10 +236,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Account is now removed";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -299,11 +272,8 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->mod     = "trap";
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Zempire Protected - Possible Hack Attempt";
 		$this->_helper->pagestats->hacked($_SERVER["REMOTE_ADDR"]);
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->layout->setLayout('core.layout');
 	}
 
@@ -314,10 +284,7 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->mod     = "timeban";
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Zempire Protected - Time Ban";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->layout->setLayout('core.layout');
 	}
 
@@ -328,11 +295,8 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->mod     = "errors";
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "400";
-		$wmf_ns->jdtitle	= "Zempire Protected - Possible Hack Attempt";
 		$this->_helper->pagestats->errors($_SERVER["REMOTE_ADDR"]);
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->layout->setLayout('core.layout');
 	}
 
@@ -344,9 +308,6 @@ class ShieldController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = "guest";
-		$wmf_ns->jdwidth 	= "400";
-		$wmf_ns->jdheight	= "250";
-		$wmf_ns->jdtitle	= "Sploit.Shield/Logout";
 		$this->_helper->layout->setLayout('core.layout');
 		$auth = Zend_Auth::getInstance();
 		$auth->clearIdentity();

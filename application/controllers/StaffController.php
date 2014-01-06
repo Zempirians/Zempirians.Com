@@ -22,9 +22,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Staff.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -42,9 +39,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Staff.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -65,9 +59,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Staff.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -88,9 +79,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Staff.Index";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -112,9 +100,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "addcurriculum";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');
@@ -131,9 +116,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "curriculumsubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');
@@ -166,9 +148,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "courseadd";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');
@@ -185,9 +164,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "coursesubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');
@@ -222,9 +198,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "addlesson";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');
@@ -241,9 +214,6 @@ class StaffController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "lessonsubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('staff.layout');

@@ -15,9 +15,6 @@ class ChatController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "stats";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Stats";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
@@ -30,9 +27,6 @@ class ChatController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "howtohack";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.HowToHack";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
@@ -45,9 +39,6 @@ class ChatController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "staff";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Staff";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
@@ -60,9 +51,6 @@ class ChatController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "shehacks";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.SheHacks";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');
@@ -76,9 +64,6 @@ class ChatController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "academy";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "Chat.Academy";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('reddit.layout');

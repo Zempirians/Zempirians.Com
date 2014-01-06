@@ -21,9 +21,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Account.Profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -41,10 +38,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "420";
-		$wmf_ns->jdtitle	= "Change your handle (nickname)";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 
@@ -61,10 +55,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Handle is now changed";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -94,10 +85,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "click";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "550";
-		$wmf_ns->jdheight	= "420";
-		$wmf_ns->jdtitle	= "Change your password";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 
@@ -114,10 +102,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Password is now changed";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -150,9 +135,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Add a new skill to your profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -170,9 +152,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Engine";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -207,9 +186,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Add a new skill to your profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -227,9 +203,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Engine";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -267,9 +240,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Add a new skill to your profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -287,9 +257,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Engine";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -327,9 +294,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Add a new skill to your profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -347,9 +311,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Engine";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -387,9 +348,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "click";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Add a new skill to your profile";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -407,9 +365,6 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip  = "submit";
 		$wmf_ns->grant    = "yes";
 		$wmf_ns->rights   = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth  = "550";
-		$wmf_ns->jdheight = "420";
-		$wmf_ns->jdtitle  = "Engine";
 		$wmf_ns->stats    = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
@@ -444,10 +399,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Password is now changed";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }
@@ -475,10 +427,7 @@ class AccountController extends Zend_Controller_Action
 		$wmf_ns->descrip = "submit";
 		$wmf_ns->grant   = "yes";
 		$wmf_ns->rights  = $this->_helper->myprofile->numtoval('worm');
-		$wmf_ns->jdwidth 	= "630";
-		$wmf_ns->jdheight	= "275";
-		$wmf_ns->jdtitle	= "Password is now changed";
-		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
+		$wmf_ns->stats   = $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 
 		$timeban = $this->_helper->shieldsup->timeban($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip);
 		if ($timeban == "UGH") { $this->_redirect('shield/timeban'); }

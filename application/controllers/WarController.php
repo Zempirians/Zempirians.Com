@@ -26,9 +26,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "home";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -44,9 +41,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "journal";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -64,9 +58,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "score";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -94,9 +85,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "battle";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -124,9 +112,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "details";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -159,9 +144,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "hack";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -187,9 +169,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "team";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -210,9 +189,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamhelp";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -234,9 +210,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamcreate";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -258,9 +231,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamadd";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -281,9 +251,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamaddsubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -313,9 +280,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamjoin";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -345,9 +309,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamdeny";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -377,9 +338,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamsubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -414,9 +372,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamqueue";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -442,9 +397,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamerror";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -462,9 +414,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamcreateerror";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -487,9 +436,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamprogress";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -521,9 +467,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "teamprogresssubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -566,9 +509,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "hacksubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -604,9 +544,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "kicksubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -637,9 +574,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "warhelp";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -654,9 +588,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminhelp";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -675,9 +606,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admin";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -700,9 +628,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminaddcamp";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -720,9 +645,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminaddcampsubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -751,9 +673,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admingocamp";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -780,9 +699,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminaddnode";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -800,9 +716,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminaddnodesubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -833,9 +746,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admineditnode";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -861,9 +771,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admineditnodesubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -940,9 +847,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admingonode";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -969,9 +873,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminsabnode";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -995,9 +896,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminsabmsg";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -1024,9 +922,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminsabnodesubmit";
 		$wmf_ns->descrip 	= "submit";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -1058,9 +953,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "admingoteam";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
@@ -1088,9 +980,6 @@ class WarController extends Zend_Controller_Action
 		$wmf_ns->mod     	= "adminkickteam";
 		$wmf_ns->descrip 	= "click";
 		$wmf_ns->grant   	= "yes";
-		$wmf_ns->jdwidth 	= "700";
-		$wmf_ns->jdheight	= "450";
-		$wmf_ns->jdtitle	= "About.Splash";
 		$wmf_ns->stats		= $this->_helper->pagestats->log($wmf_ns->page,$wmf_ns->mod);
 		$this->_helper->shieldsup->surflog($wmf_ns->mod,$wmf_ns->page,$wmf_ns->descrip,'1');
 		$this->_helper->layout->setLayout('war.layout');
