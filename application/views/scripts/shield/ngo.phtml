@@ -1,23 +1,30 @@
-	<div id="dialog">
-<div class="my_table_1">
-
+<center>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th>Shield => Deny registration</th>
+				</tr>
+			</thead>
+			<tbody>
 <?php
 	if ($this->w0rm == "YAY") {
 ?>
-
-	<div class="s_forum_table_2">
-		<div class="s_shield_header">SUCCESS! ACCOUNT WAS DESTROYED</div>
-		<div class="s_shield_header_text">You have been eliminated from our database.</div>
-	</div>
-
+				<tr>
+					<td>SUCCESS! ACCOUNT WAS DESTROYED</td>
+				</tr>
+				<tr>
+					<td>You have been eliminated from our database.</td>
+				</tr>
 <?php
 	} else {
 
 ?>
-
-	<div class="s_forum_table_2">
-		<div class="s_shield_header">There is no code and email matching specified entries.</div>
-	</div>
+				<tr>
+					<td>There is no code and email matching specified entries.</td>
+				</tr>
 <?php } ?>
-</div>
+			</tbody>
+		</table>
 	</div>
+</center>

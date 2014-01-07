@@ -1,12 +1,29 @@
-<div id="dialog">
-<div class="s_shield_table_4">
+<center>
 <form action="/shield/vgo" method="POST">
-	<div class="s_shield_table_tr4a">Please type the email address you signed up with and click verify to continue.</div>
-	<div class="s_shield_table_td4a">CODE:</div>
-	<div class="s_shield_table_td4b"><input type="text" name="code" value="<?php echo $this->code; ?>" class="s_shield_form_input4"></div>
-	<div class="s_shield_table_td4c">EMAIL:</div>
-	<div class="s_shield_table_td4d"><input type="text" name="email" class="s_shield_form_input4"></div>
-	<div class="s_shield_table_td4e"><input type="submit" name="submit" value="Verify" class="s_shield_form_submit4"></div>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Shield => Registration => Verify</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2">Please type the email address you signed up with and click verify to continue.</td>
+				</tr>
+				<tr>
+					<td>CODE</td>
+					<td><input type="text" name="code" value="<?php echo $this->code; ?>" class="s_shield_form_input4"></td>
+				</tr>
+				<tr>
+					<td>EMAIL</td>
+					<td><input type="text" name="email" class="s_shield_form_input4"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Verify" class="s_shield_form_submit4"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </form>
-</div>
-</div>
+</center>

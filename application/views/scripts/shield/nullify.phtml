@@ -1,12 +1,33 @@
-<div id="dialog">
-<div class="s_shield_table_5">
+<center>
 <form action="/shield/ngo" method="POST">
-			<div class="s_shield_table_tr5a">Please type the email address you received this message from and click delete.</div>
-			<div class="s_shield_table_td5a">CODE:</div>
-			<div class="s_shield_table_td5b"><input type="text" name="code" value="<?php echo $this->code; ?>" class="s_shield_form_input5"></div>
-			<div class="s_shield_table_td5c">EMAIL:</div>
-			<div class="s_shield_table_td5d"><input type="text" name="email" class="s_shield_form_input5"></div>
-			<div class="s_shield_table_td5e"><input type="submit" name="submit" value="Delete" class="s_shield_form_submit5"></div>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Shield => Deny registration</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2">Please type the email address you received this message from and click delete.</td>
+				</tr>
+				<tr>
+					<td>CODE</td>
+					<td><input type="text" name="code" value="<?php echo $this->code; ?>" class="s_shield_form_input5"></td>
+				</tr>
+				<tr>
+					<td>EMAIL</td>
+					<td><input type="text" name="email" class="s_shield_form_input5"></td>
+				</tr>
+				<tr>
+					<td>Extra details (ie: specify misc, school, etc)</td>
+					<td><input type="text" name="s_other" class="s_account_form_input0" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Delete" class="s_shield_form_submit5"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </form>
-</div>
-</div>
+</center>
