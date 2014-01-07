@@ -1,20 +1,33 @@
-<div id="dialog">
-<div class="my_table_1">
-
+<center>
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
 <?php
 	if ($this->w0rm == "YAY") {
 ?>
-	<div class="s_forum_table_2">
-		<div class="s_shield_header">SUCCESS! EMAIL VERIFIED</div>
-		<div class="s_shield_header_text">Next you will need to setup a username to login with.</div>
-	</div>
+			<thead>
+				<tr>
+					<th>Shield => Registration => Success!</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>You may now access to the Sign in page.</td>
+				</tr>
 <?php
 	} else {
 
 ?>
-	<div class="s_forum_table_2">
-		<div class="s_shield_header">FAILED</div>
-	</div>
+			<thead>
+				<tr>
+					<th>Shield => Registration => Failure</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Something has gone awfully wrong. You should not see this.</td>
+				</tr>
 <?php } ?>
-</div>
-</div>
+			</tbody>
+		</table>
+	</div>
+</center>
