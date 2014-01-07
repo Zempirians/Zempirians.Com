@@ -21,16 +21,12 @@
 	});
 
 	$(function() {		
-		$("#grida").tablesorter({widgets: ['zebra']});
+		$("#gridc").tablesorter({widgets: ['zebra']});
 		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
 	});
 
 	$(function() {		
-		$("#gridb").tablesorter({widgets: ['zebra']});
-	});
-
-	$(function() {
-		$( "#dialog" ).dialog({ width: <?php echo $wmf_xs->jdwidth; ?>,	height: <?php echo $wmf_xs->jdheight; ?>, title: "<?php echo $wmf_xs->jdtitle; ?>" });
+		$("#grida").tablesorter({widgets: ['zebra']});
 	});
 
 	$(function () {
