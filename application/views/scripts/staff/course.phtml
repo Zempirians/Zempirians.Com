@@ -10,6 +10,7 @@
 		<th>Course</th>
 		<th>Created</th>
 		<th>Suggested by</th>
+		<th>Status</th>
 	</tr>
 </thead>
 <tbody>
@@ -17,19 +18,20 @@
 		$resultB = $this->newlist;
 		foreach ($resultB as $result) {
 			$ci   = $this->academyCurriculum('lookup',$result["pid"]);
-			$info = $this->profileInfo($result["id"]);
+			$info = $this->profileInfo($result["owner_id"]);
 ?>
 	<tr>
-		<td><?php echo $ci["name"]; ?></td>
-		<td><?php echo $result["name"]; ?></td>
+		<td><a href="/staff/lookcurriculum?stdin=<?php echo $result["pid"]; ?>"><?php echo $ci["name"]; ?></a></td>
+		<td><a href="/staff/lookcourse?stdin=<?php echo $result["id"]; ?>"><?php echo $result["name"]; ?></a></td>
 		<td><?php echo $result["owner_create"]; ?></td>
 		<td><?php echo $info["handle"]; ?></td>
+		<td><?php echo $this->academyCourse('status',$result["id"]); ?></td>
 	</tr>
 <?php
 		}
 ?>
 	<tr>
-		<td colspan=4><a href="/staff/addcourse" class="hack_button">Add Course</a></td>
+		<td colspan=5><a href="/staff/addcourse" class="hack_button">Add Course</a></td>
 	</tr>
 </tbody>
 </table>

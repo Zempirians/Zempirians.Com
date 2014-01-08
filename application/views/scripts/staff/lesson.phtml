@@ -11,6 +11,7 @@
 		<th>Lesson</th>
 		<th>Created</th>
 		<th>Suggested by</th>
+		<th>Status</th>
 	</tr>
 </thead>
 <tbody>
@@ -22,17 +23,18 @@
 			$info = $this->profileInfo($result["id"]);
 ?>
 	<tr>
-		<td><?php echo $ci["name"]; ?></td>
-		<td><?php echo $co["name"]; ?></td>
-		<td><?php echo $result["name"]; ?></td>
+		<td><a href="/staff/lookcurriculum?stdin=<?php echo $result["pid"]; ?>"><?php echo $ci["name"]; ?></a></td>
+		<td><a href="/staff/lookcourse?stdin=<?php echo $result["cid"]; ?>"><?php echo $co["name"]; ?></a></td>
+		<td><a href="/staff/looklesson?stdin=<?php echo $result["id"]; ?>"><?php echo $result["name"]; ?></a></td>
 		<td><?php echo $result["owner_create"]; ?></td>
 		<td><?php echo $info["handle"]; ?></td>
+		<td><?php echo $this->academyLesson('status',$result["id"]); ?></td>
 	</tr>
 <?php
 		}
 ?>
 	<tr>
-		<td colspan=5><a href="/staff/addlesson" class="hack_button">Add Lesson</a></td>
+		<td colspan=6><a href="/staff/addlesson" class="hack_button">Add Lesson</a></td>
 	</tr>
 </tbody>
 </table>

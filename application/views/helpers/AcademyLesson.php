@@ -1,8 +1,8 @@
 <?php
 
-class Zend_View_Helper_AcademyCurriculum
+class Zend_View_Helper_AcademyLesson
 {
-	public function academyCurriculum ($type,$str)
+	public function academyLesson ($type,$str)
 	{
 		$wmf_xs = new Zend_Session_Namespace('SPLOIT');
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
@@ -18,19 +18,26 @@ class Zend_View_Helper_AcademyCurriculum
 		switch ($type) {
 			case "lookup":
 				$queryF = $db->select()
-					->from('school_curriculum')
+					->from('school_lesson')
 					->where('id = ?', $str);
 				$resultF = $db->fetchRow($queryF);
 				$queryF->reset();
 				$answer = $resultF;
 				break;
+			case "obtain":
+				$queryF = $db->select()
+					->from('school_lesson')
+					->where('cid = ?', $str);
+				$resultF = $db->fetchAll($queryF);
+				$queryF->reset();
+				$answer = $resultF;
+				break;
 			case "status":
 				$queryF = $db->select()
-					->from('school_curriculum')
+					->from('school_lesson')
 					->where('id = ?', $str);
 				$resultF = $db->fetchRow($queryF);
 				$queryF->reset();
-
 				if ($resultF["admin_id"] == "0") {
 					$answer = "Pending";
 				}

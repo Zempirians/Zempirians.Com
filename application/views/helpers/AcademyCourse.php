@@ -24,6 +24,31 @@ class Zend_View_Helper_AcademyCourse
 				$queryF->reset();
 				$answer = $resultF;
 				break;
+			case "obtain":
+				$queryF = $db->select()
+					->from('school_course')
+					->where('pid = ?', $str)
+					->where('en = ?', "1");
+				$resultF = $db->fetchAll($queryF);
+				$queryF->reset();
+				$answer = $resultF;
+				break;
+			case "status":
+				$queryF = $db->select()
+					->from('school_course')
+					->where('id = ?', $str);
+				$resultF = $db->fetchRow($queryF);
+				$queryF->reset();
+				if ($resultF["admin_id"] == "0") {
+					$answer = "Pending";
+				}
+				elseif ($resultF["admin_vote"] == "1") {
+					$answer = "Approved";
+				}
+				elseif ($resultF["admin_vote"] == "0") {
+					$answer = "Denied";
+				}
+				break;
 		}
 
 		// OUTPUT HTML SOURCE
