@@ -9,6 +9,7 @@
 		<th>Curriculum</th>
 		<th>Created</th>
 		<th>Suggested by</th>
+		<th>Status</th>
 	</tr>
 </thead>
 <tbody>
@@ -18,15 +19,16 @@
 			$info = $this->profileInfo($result["owner_id"]);
 ?>
 	<tr>
-		<td><?php echo $result["name"]; ?></td>
+		<td><a href="/staff/lookcurriculum?stdin=<?php echo $result["id"]; ?>"><?php echo $result["name"]; ?></a></td>
 		<td><?php echo $result["owner_create"]; ?></td>
 		<td><?php echo $info["handle"]; ?></td>
+		<td><?php echo $this->academyCurriculum('status',$result["id"]); ?></td>
 	</tr>
 <?php
 		}
 ?>
 	<tr>
-		<td colspan=3><a href="/staff/addcurriculum" class="hack_button">Add Curriculum</a></td>
+		<td colspan=4><a href="/staff/addcurriculum" class="hack_button">Add Curriculum</a></td>
 	</tr>
 </tbody>
 </table>

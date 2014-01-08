@@ -1,0 +1,60 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$mytarget = $this->academyCourse('lookup',$this->stdin);
+?>
+
+<center>
+<form action="/staff/coursesave" method="POST">
+<input type="hidden" name="stdin" value="<?php echo $mytarget["id"]; ?>">
+	<div class="jhjk_table_3">
+		<table id="grida" class="tablesorter">
+			<thead>
+				<tr>
+					<th colspan="2">Edit Course - ID# <?php echo $mytarget["id"]; ?></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Curriculum</td>
+					<td>
+						<select name="s_curriculum" class="s_account_form_input0" />
+<?php
+		$resultA = $this->academyList('curriculum');
+		foreach ($resultA as $result) {
+			echo "							<option value=\"". $result["id"] ."\">". $result["name"] ."</option>\n";
+		}
+?>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Name</td>
+					<td>
+						<input type="text" name="s_name" class="s_account_form_input0" value="<?php echo $mytarget["name"]; ?>" />
+					</td>
+				</tr>
+				<tr>
+					<td>Access Level</td>
+					<td>
+						<select name="s_level" class="s_account_form_input0" />
+							<option value="0">Public</option>
+							<option value="1">Students</option>
+							<option value="2">Staff</option>
+							<option value="6">Classified</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>
+						<textarea style="width:800px;height:200px" name="s_other"><?php echo $mytarget["description"]; ?></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" name="submit" value="Save" class="s_account_form_submit0"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>
+</center>

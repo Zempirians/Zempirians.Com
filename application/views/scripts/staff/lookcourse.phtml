@@ -1,0 +1,53 @@
+<?php
+	$wmf_xs   = new Zend_Session_Namespace('SPLOIT');
+	$my_co    = $this->academyCourse('lookup',$this->stdin);
+	$my_ci    = $this->academyCurriculum('lookup',$my_co["pid"]);
+	$owner    = $this->profileInfo($my_co["owner_id"]);
+	$state    = $this->academyCourse('status',$this->stdin);
+?>
+
+
+<h1><?php echo $my_co["name"]; ?>
+<?php
+	if ($this->zempirian->rights >= 3 || $this->zempirian->id == $my_co["owner_id"]) {
+?>
+	<a href="/staff/editcourse?stdin=<?php echo $my_co["id"]; ?>" class="hack_button">edit</a>
+<?php } ?>
+</h1>
+<br /><br />
+Curriculum: <a href="/staff/lookcurriculum?stdin=<?php echo $my_ci["id"]; ?>"><?php echo $my_ci["name"]; ?></a>
+<br /><br />
+<div><?php echo $my_co["description"]; ?></div>
+<div>
+<br /><br />
+Prerequisites:
+<br /><br />
+Author: <?php echo $owner["handle"]; ?>, Created: <?php echo $my_co["owner_create"]; ?>, Status: <?php echo $state; ?>
+
+<hr>
+
+<?php
+		$resultB = $this->academyLesson('obtain',$this->stdin);
+		foreach ($resultB as $result) {
+			$info = $this->profileInfo($result["owner_id"]);
+			$xsta = $this->academyLesson('status',$result["id"]);
+?>
+<div><h3><a href="/staff/looklesson?stdin=<?php echo $result["id"]; ?>"><?php echo $result["name"]; ?></a></h3><br>
+<?php echo $result["description"]; ?>
+<br /><br />
+Prerequisites:
+<br /><br />
+Author: <?php echo $info["handle"]; ?>, Created: <?php echo $result["owner_create"]; ?>, Status: <?php echo $xsta; ?>
+<?php
+	if ($xsta == "Pending") {
+	if ($this->zempirian->rights >= 3 || $this->zempirian->id == $result["owner_id"]) {
+?>
+ <a href="/staff/acceptlesson?stdin=<?php echo $result["id"]; ?>" class="hack_button">Accept</a> <a href="/staff/denylesson?stdin=<?php echo $result["id"]; ?>" class="hack_button">Deny</a>
+<?php } } ?>
+</div>
+
+<hr>
+
+<?php
+		}
+?>
